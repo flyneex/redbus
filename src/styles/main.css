@@ -1,0 +1,532 @@
+:root {
+  --red: #d41411;
+  --white: #fff;
+  --black: #151227;
+  --brown: #b3b3b3;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Euclid Flex", sans-serif;
+  color: var(--white);
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #fafafa;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  font-size: unset;
+  font-weight: unset;
+}
+
+.wrapper {
+  max-width: 1516px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  margin-top: 60px;
+}
+.header_logo div:first-child {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 61.92px;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+.header_logo div:first-child span {
+  color: var(--red);
+}
+.header_logo div:last-child {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 19.02px;
+  color: var(--white);
+}
+.header_nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.header_nav ul li a {
+  font-size: 20px;
+  line-height: 25.36px;
+  letter-spacing: -0.03em;
+  color: var(--white);
+}
+.header_nav ul li a .active {
+  color: #c0c0c0;
+}
+.header_utils {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.header_lang {
+  font-size: 20px;
+  line-height: 25.36px;
+  letter-spacing: -0.03em;
+  text-align: left;
+  margin-right: 50px;
+}
+.header_lang span::after {
+  content: url("../assets/shevron.svg");
+  margin-left: 10px;
+}
+.header_num {
+  background-color: var(--red);
+  padding: 20px 30px;
+  border-radius: 88px;
+  margin-right: 29px;
+}
+.header_num a {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25.36px;
+  letter-spacing: -0.03em;
+  color: var(--white);
+}
+.header_cart {
+  border: 2px solid rgba(255, 255, 255, 0.1019607843);
+  border-radius: 88px;
+  padding: 24px 33px;
+}
+
+.billboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  position: relative;
+  background-image: url("../assets/redbus04.jpg");
+  /* height: 979px; */
+}
+.billboard_info {
+  width: 808px;
+  text-align: center;
+  margin-top: 343px;
+  margin-bottom: 207px;
+}
+.billboard_info h1 {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 105.6px;
+  letter-spacing: -0.03em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.billboard_info p {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 50.72px;
+  letter-spacing: -0.03em;
+  margin-top: 20px;
+}
+.billboard_info button {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25.36px;
+  letter-spacing: -0.03em;
+  margin-top: 47px;
+  border: 2px solid rgba(255, 255, 255, 0.1019607843);
+  padding: 35px 90px;
+  border-radius: 90px;
+  color: var(--white);
+  background-color: transparent;
+}
+.billboard_info button::after {
+  content: url("../assets/arrowwhite.svg");
+  margin-left: 10px;
+}
+
+.tour {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-bottom: 130px;
+}
+.tour_info {
+  background-image: url("../assets/baiterek.jpg");
+  width: 985px;
+  grid-column: span 2;
+  grid-row: 1/-1;
+  padding: 235px 142px;
+}
+.tour_info h3 {
+  font-size: 48px;
+  line-height: 57.6px;
+  letter-spacing: -0.03em;
+  margin-bottom: 60px;
+}
+.tour_info button {
+  padding: 35px 90px;
+  border-radius: 90px;
+}
+.tour_info button:first-child {
+  background-color: var(--red);
+  margin-right: 27px;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25.36px;
+  letter-spacing: -0.03em;
+}
+.tour_info button:first-child::after {
+  content: url("../assets/ticket.svg");
+  margin-left: 10px;
+}
+.tour_info button:last-child {
+  background-color: transparent;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25.36px;
+  letter-spacing: -0.03em;
+  border: 2px solid rgba(255, 255, 255, 0.1019607843);
+}
+.tour_info button:last-child::after {
+  content: url("../assets/arrowwhite.svg");
+  margin-left: 10px;
+}
+.tour_info p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 21.6px;
+  letter-spacing: -0.03em;
+  color: #d0d0d0;
+  margin-top: 50px;
+}
+.tour_info p a {
+  text-decoration: underline;
+  color: #d0d0d0;
+}
+.tour_tickets {
+  background-image: url("../assets/red.png");
+  background-color: var(--red);
+  width: 468px;
+  padding: 122px 0 122px 45px;
+}
+.tour_tickets h5 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38.4px;
+  letter-spacing: -0.03em;
+  margin-bottom: 40px;
+}
+.tour_tickets button {
+  font-size: 18px;
+  line-height: 22.82px;
+  letter-spacing: -0.03em;
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+  padding: 25px 40px;
+  border-radius: 90px;
+}
+.tour_tickets button::after {
+  content: url("../assets/arrowwhite.svg");
+  margin-left: 10px;
+}
+.tour_schedule {
+  background-image: url("../assets/white.png");
+  width: 468px;
+  padding: 122px 0 122px 50px;
+}
+.tour_schedule h5 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38.4px;
+  letter-spacing: -0.03em;
+  color: var(--black);
+  margin-bottom: 40px;
+}
+.tour_schedule button {
+  font-size: 18px;
+  line-height: 22.82px;
+  letter-spacing: -0.03em;
+  background-color: transparent;
+  color: var(--black);
+  border: 2px solid rgba(45, 45, 45, 0.1019607843);
+  padding: 25px 40px;
+  border-radius: 90px;
+}
+.tour_schedule button::after {
+  content: url("../assets/arrowblack.svg");
+  margin-left: 10px;
+}
+.tour_rent {
+  background-image: url("../assets/bustour.jpg");
+  grid-column: span 2;
+  width: 935px;
+  padding: 84px 73px 84px 50px;
+}
+.tour_rent h5 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38.4px;
+  letter-spacing: -0.03em;
+  margin-bottom: 15px;
+}
+.tour_rent p {
+  font-size: 18px;
+  line-height: 21.6px;
+  letter-spacing: -0.03em;
+  margin-bottom: 40px;
+}
+.tour_rent button {
+  font-size: 18px;
+  line-height: 22.82px;
+  letter-spacing: -0.03em;
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.1019607843);
+  padding: 25px 40px;
+  border-radius: 90px;
+}
+.tour_rent button::after {
+  content: url("../assets/arrowwhite.svg");
+  margin-left: 10px;
+}
+
+.audiogid {
+  margin-bottom: 130px;
+}
+.audiogid h4 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: -0.03em;
+  color: var(--black);
+  margin-bottom: 84px;
+}
+.audiogid_logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 23px;
+}
+.audiogid_logos img {
+  border-radius: 90px;
+}
+
+.faq {
+  margin-bottom: 60px;
+}
+.faq h4 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: -0.03em;
+  margin-bottom: 60px;
+  color: var(--black);
+}
+.faq summary,
+.faq details {
+  color: var(--black);
+  /* padding: 40px; */
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 175px;
+  margin-bottom: 70px;
+}
+.socials_insta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.socials_insta > div:first-child {
+  width: 100px;
+  height: 100px;
+  background-color: var(--red);
+  border-radius: 50%;
+  padding: 25px;
+}
+.socials_insta > div:last-child div:first-child {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 26.4px;
+  letter-spacing: -0.03em;
+  color: var(--black);
+}
+.socials_insta > div:last-child div:last-child {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 52.8px;
+  letter-spacing: -0.03em;
+  color: var(--black);
+}
+.socials_publish {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+.socials_publish div > div:first-child {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40.58px;
+  color: var(--black);
+}
+.socials_publish div > div:last-child {
+  font-size: 20px;
+  line-height: 25.36px;
+  color: #8f9cbb;
+}
+.socials_btn button {
+  color: var(--white);
+  background-color: var(--red);
+  padding: 35px 90px;
+  border-radius: 90px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25.36px;
+  letter-spacing: -0.03em;
+}
+
+.instagram {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+  margin-bottom: 130px;
+}
+.instagram div {
+  width: 300px;
+}
+
+.footer {
+  color: var(--brown);
+  background-color: var(--white);
+  padding: 50px 0;
+}
+.footer_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 40px;
+}
+.footer_logo div:first-child {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 61.92px;
+  letter-spacing: -0.02em;
+  color: var(--brown);
+}
+.footer_logo div:first-child span {
+  color: var(--red);
+}
+.footer_logo div:last-child {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 19.02px;
+  color: var(--brown);
+}
+.footer_nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.footer_nav ul li a {
+  color: var(--brown);
+  font-size: 16px;
+  line-height: 20.29px;
+  letter-spacing: -0.03em;
+}
+.footer_contacts p {
+  color: var(--brown);
+  font-size: 16px;
+  line-height: 20.29px;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+}
+.footer_contacts p:first-child::before {
+  content: url("../assets/marker.svg");
+  margin-right: 10px;
+  width: 24px;
+}
+.footer_contacts p:last-child::before {
+  content: url("../assets/envelope.svg");
+  margin-right: 10px;
+  width: 24px;
+}
+.footer_copyright {
+  color: var(--brown);
+  font-size: 12px;
+  line-height: 13.2px;
+  letter-spacing: -0.03em;
+}/*# sourceMappingURL=main.css.map */
