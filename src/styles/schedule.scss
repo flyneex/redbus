@@ -1,0 +1,70 @@
+@import './vars';
+
+.schedule {
+	margin-bottom: 130px;
+	h4 {
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 48px;
+		letter-spacing: -0.03em;
+		margin-bottom: 55px;
+	}
+	&_box {
+		@include flex(flex, space-between, center, 48px);
+		margin-bottom: 68px;
+	}
+	&_item {
+		flex: calc(33.333% - 48px);
+		background-image: url('../assets/white2.png');
+		background-color: var(--white);
+		padding: 120px 59px;
+		text-align: center;
+		div:first-child {
+			font-size: 32px;
+			font-weight: 700;
+			line-height: 38.4px;
+			letter-spacing: -0.03em;
+			margin-bottom: 20px;
+		}
+		div:last-child {
+			font-size: 32px;
+			line-height: 38.4px;
+			letter-spacing: -0.03em;
+		}
+	}
+	&_text {
+		padding: 0 260px;
+		h5 {
+			font-size: 32px;
+			line-height: 38.4px;
+			letter-spacing: -0.03em;
+			margin-bottom: 55px;
+		}
+		p {
+			font-size: 18px;
+			line-height: 25.2px;
+			letter-spacing: -0.03em;
+			margin-bottom: 55px;
+		}
+		ul {
+			list-style-position: inside;
+			li {
+				font-size: 18px;
+				line-height: 25.2px;
+				letter-spacing: -0.03em;
+				list-style-type: disc;
+			}
+		}
+	}
+}
+
+.map {
+	margin-bottom: 130px;
+	h4 {
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 44px;
+		letter-spacing: -0.03em;
+		margin-bottom: 80px;
+	}
+}

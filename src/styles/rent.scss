@@ -1,0 +1,78 @@
+@import './vars';
+
+.rent {
+	margin-bottom: 130px;
+	h4 {
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 48px;
+		letter-spacing: -0.03em;
+		margin-bottom: 80px;
+	}
+	&_slider {
+		margin-bottom: 60px;
+	}
+	&_text {
+		padding: 0 260px;
+		margin-bottom: 60px;
+		p {
+			font-size: 18px;
+			line-height: 25.2px;
+			letter-spacing: -0.03em;
+			margin-bottom: 30px;
+		}
+	}
+	&_box {
+		padding: 0 260px;
+		@include flex(flex, flex-start, center, 50px);
+		flex-wrap: wrap;
+	}
+	&_item {
+		flex: calc(50% - 50px);
+		text-align: center;
+		div:first-child {
+			font-size: 32px;
+			line-height: 38.4px;
+			letter-spacing: -0.03em;
+			margin-bottom: 10px;
+		}
+		div:nth-child(2) {
+			font-size: 32px;
+			font-weight: 700;
+			line-height: 38.4px;
+			letter-spacing: -0.03em;
+		}
+	}
+	&_item:first-child,
+	&_item:nth-child(2) {
+		background-image: url('../assets/red3.png');
+		background-color: var(--red);
+		padding: 61px 96px;
+		color: var(--white);
+	}
+	&_item:last-child,
+	&_item:nth-child(3) {
+		background-image: url('../assets/white3.png');
+		background-color: var(--white);
+		padding: 73px 151px;
+		color: var(--black);
+	}
+	&_btn {
+		margin-top: 30px;
+		button {
+			font-size: 18px;
+			line-height: 22.82px;
+			letter-spacing: -0.03em;
+			padding: 25px 40px;
+			color: var(--white);
+			border: 2px solid var(--white);
+			border-radius: 90px;
+			background-color: transparent;
+			cursor: pointer;
+			&::after {
+				content: url('../assets/arrowwhite.svg');
+				margin-left: 10px;
+			}
+		}
+	}
+}

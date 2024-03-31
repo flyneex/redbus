@@ -1,0 +1,241 @@
+:root {
+  --red: #d41411;
+  --white: #fff;
+  --black: #000;
+  --brown: #b3b3b3;
+}
+
+.cart {
+  margin-bottom: 130px;
+}
+.cart_title h4 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.03em;
+  margin-bottom: 80px;
+}
+.cart_pretext {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 38.4px;
+  letter-spacing: -0.03em;
+  margin-bottom: 55px;
+}
+.cart_box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 49px;
+  margin-bottom: 80px;
+}
+.cart_list {
+  flex: calc(65% - 49px);
+}
+.cart_item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 30px;
+  background-color: var(--white);
+}
+.cart_img {
+  background-image: url("../assets/redcart.png");
+  background-color: var(--red);
+  padding: 106px 84px;
+}
+.cart_img img {
+  max-width: none;
+}
+.cart_product {
+  padding: 0 30px;
+}
+.cart_product h4 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  letter-spacing: -0.03em;
+  color: var(--red);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.cart_product p {
+  font-size: 24px;
+  line-height: 28.8px;
+  letter-spacing: -0.03em;
+  margin-bottom: 30px;
+}
+.cart_product div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+.cart_product div span {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28.8px;
+  letter-spacing: -0.03em;
+  color: var(--red);
+}
+.cart_product div div {
+  padding: 15px 18px;
+  border: 1px solid var(--red);
+  border-radius: 44px;
+}
+.cart_product div div button {
+  color: var(--red);
+}
+.cart_product input {
+  width: 60px;
+  text-align: center;
+}
+.cart_product button {
+  background-color: transparent;
+  width: 20px;
+  cursor: pointer;
+}
+.cart_total {
+  flex: calc(35% - 49px);
+  background-color: var(--white);
+  box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.0509803922);
+  padding: 50px;
+}
+.cart_total p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.8px;
+  letter-spacing: -0.03em;
+  margin-bottom: 30px;
+}
+.cart_total div:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 50px;
+}
+.cart_total div:nth-child(2) span:first-child {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  letter-spacing: -0.03em;
+}
+.cart_total div:nth-child(2) span:last-child {
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 38.4px;
+  letter-spacing: -0.03em;
+}
+.cart_total button {
+  width: 100%;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25.36px;
+  letter-spacing: -0.03em;
+  background-color: var(--red);
+  border-radius: 90px;
+  padding: 35px 110px;
+  cursor: pointer;
+}
+.cart_payment {
+  max-width: 998px;
+  margin-bottom: 80px;
+}
+.cart_payment h4 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.03em;
+  margin-bottom: 55px;
+}
+.cart_payment_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  background-color: var(--white);
+  padding: 35px 30px;
+  box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.0509803922);
+  margin-bottom: 20px;
+}
+.cart_payment_item > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+.cart_payment_item > div p {
+  font-size: 24px;
+  line-height: 28.8px;
+  letter-spacing: -0.03em;
+}
+.cart_form {
+  max-width: 998px;
+}
+.cart_form h5 {
+  font-size: 32px;
+  line-height: 38.4px;
+  letter-spacing: -0.03em;
+  margin-bottom: 15px;
+}
+.cart_form h5::after {
+  content: url("../assets/Circle_Warning.svg");
+  margin-left: 20px;
+}
+.cart_form p {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.03em;
+  margin-bottom: 55px;
+}
+.cart_form form {
+  margin-bottom: 27px;
+}
+.cart_form form input {
+  display: block;
+  border: 1px solid #2d2d2d;
+  margin-bottom: 10px;
+  padding: 17px 25px 19px 25px;
+  width: 100%;
+}
+.cart_form form input:placeholder {
+  font-size: 18px;
+  line-height: 21.6px;
+  letter-spacing: -0.03em;
+}
+.cart_form form input[type=checkbox] {
+  width: unset;
+  margin-bottom: 0;
+}
+.cart_form form div:first-of-type {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-top: 27px;
+}
+.cart_form form p {
+  font-size: 18px;
+  line-height: 21.6px;
+  letter-spacing: -0.03em;
+  margin-bottom: 0;
+}
+.cart_form form p a {
+  color: var(--black);
+  border-bottom: 1px solid #2d2d2d;
+}
+.cart_form form button {
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25.36px;
+  letter-spacing: -0.03em;
+  background-color: var(--red);
+  border-radius: 90px;
+  padding: 35px 110px;
+  margin-top: 55px;
+  cursor: pointer;
+}/*# sourceMappingURL=cart.css.map */

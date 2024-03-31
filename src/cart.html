@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./styles/stylesheet.css">
+	<link rel="stylesheet" href="./styles/main.css">
+	<link rel="stylesheet" href="./styles/cart.css">
+</head>
+
+<body>
+	<header class='header_red'>
+		<div class="wrapper">
+			<div class="header_logo">
+				<a href="#">
+					<div>redbus</div>
+					<div>экскурсии по городу</div>
+				</a>
+			</div>
+			<nav class='header_nav'>
+				<ul>
+					<li><a href="#">О нас</a></li>
+					<li><a class="active" href="#">Маршруты</a></li>
+					<li><a href="#">Расписание</a></li>
+					<li><a href="#">Аренда</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</nav>
+			<div class="header_utils">
+				<div class="header_lang"><span>Рус</span></div>
+				<div class="header_num">
+					<a href="tel:+77775557575">+7 777 555 7575</a>
+				</div>
+				<div class="header_cart"><img src="./assets/cart.svg" alt="Cart"></div>
+			</div>
+		</div>
+	</header>
+	<div class="breadcrums wrapper">
+		<ul>
+			<li><a href="#">Главная</a></li>
+			<li><a href="#" class='active'>Корзина</a></li>
+		</ul>
+	</div>
+	<main>
+		<div class="cart wrapper">
+			<div class="cart_title">
+				<h4>Корзина</h4>
+			</div>
+			<div class="cart_pretext">Добавленные продукты</div>
+			<div class="cart_box">
+				<div class="cart_list">
+					<div class="cart_item">
+						<div class="cart_img">
+							<div>
+								<img src="./assets/ticket_cart.svg" alt="Product Image">
+							</div>
+						</div>
+						<div class="cart_product">
+							<h4>Взрослый билет</h4>
+							<p>Экскурсии по городу Астана на двухэтажных автобусах Red Bus</p>
+							<div>
+								<span>5 000/тенге</span>
+								<div>
+									<button><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M6 12H18" stroke="#D41411" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round" />
+										</svg></button>
+									<input type="text" value='1' min='1' max='60'>
+									<button><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M6 12H12M12 12H18M12 12V18M12 12V6" stroke="#D41411" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round" />
+										</svg></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cart_item">
+						<div class="cart_img">
+							<div>
+								<img src="./assets/ticket_cart.svg" alt="Product Image">
+							</div>
+						</div>
+						<div class="cart_product">
+							<h4>Льготный билет для детей, студентов и пенсионеров</h4>
+							<p>Экскурсии по городу Астана на двухэтажных автобусах Red Bus</p>
+							<div>
+								<span>3 000/тенге</span>
+								<div>
+									<button><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M6 12H18" stroke="#D41411" stroke-width="2" stroke-linecap="round"
+												stroke-linejoin="round" />
+										</svg></button>
+									<input type="text" value='1' min='1' max='60'>
+									<button><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+											xmlns="http://www.w3.org/2000/svg">
+											<path d="M6 12H12M12 12H18M12 12V18M12 12V6" stroke="#D41411" stroke-width="2"
+												stroke-linecap="round" stroke-linejoin="round" />
+										</svg></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cart_item">
+						<div class="cart_img">
+							<div>
+								<img src="./assets/ticket_cart.svg" alt="Product Image">
+							</div>
+						</div>
+						<div class="cart_product">
+							<h4>Детям до 6 лет бесплатно</h4>
+							<p>Описать условия</p>
+						</div>
+					</div>
+				</div>
+				<div class="cart_total">
+					<p>Процесс заказа</p>
+					<div>
+						<span>Всего</span>
+						<span>8 000 ₸</span>
+					</div>
+					<div class="total_btn">
+						<button>Оформить заказ</button>
+					</div>
+				</div>
+			</div>
+			<div class="cart_payment">
+				<div>
+					<h4>Оформление заказа</h4>
+				</div>
+				<div class="cart_payment_item">
+					<div>
+						<input type="checkbox" name="" id="" checked>
+						<p>Оплата банковской картой - Шлюз №1 (CloudPayments)</p>
+					</div>
+					<div><img src="./assets/visa.jpg" alt="Payments Logo"></div>
+				</div>
+				<div class="cart_payment_item">
+					<div>
+						<input type="checkbox" name="" id="">
+						<p>Оплата банковской картой- Шлюз №2 (TarlanPayments)</p>
+					</div>
+					<div><img src="./assets/visa.jpg" alt="Payments Logo"></div>
+				</div>
+				<div class="cart_payment_item">
+					<div>
+						<input type="checkbox" name="" id="">
+						<p>Оплата по номеру телефона</p>
+					</div>
+				</div>
+				<div class="cart_payment_item">
+					<div>
+						<input type="checkbox" name="" id="">
+						<p>Оплата с Kaspi QR</p>
+					</div>
+					<div><img src="./assets/kaspi-bank.jpg" alt="Payments Logo"></div>
+				</div>
+				<div class="cart_payment_item">
+					<div>
+						<input type="checkbox" name="" id="">
+						<p>Перевод на карту МИР</p>
+					</div>
+					<div><img src="./assets/mir.jpg" alt="Payments Logo"></div>
+				</div>
+			</div>
+			<div class="cart_form">
+				<div>
+					<h5>Ваши данные</h5>
+					<p>Билет будет отправлен на ваш email</p>
+				</div>
+				<div>
+					<form action="POST">
+						<input type="text" placeholder='Ваше имя *' required>
+						<input type="text" placeholder='Ваше телефон *' required>
+						<input type="text" placeholder='Ваш e-mail *' required>
+						<div>
+							<input type="checkbox" name="" id="">
+							<p>Я согласен с <a href="https://astana.citypass.kz/ru/kupit-citypass" target='_blank'>правилами и
+									условиями</a> citypass.kz</p>
+						</div>
+						<div><button>Перейти к оплате</button></div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="wrapper">
+			<div class="footer_box">
+				<div class="footer_logo">
+					<a href="#">
+						<div><span>red</span>bus</div>
+						<div>экскурсии по городу</div>
+					</a>
+				</div>
+				<nav class="footer_nav">
+					<ul>
+						<li><a href="#">О нас</a></li>
+						<li><a href="#">Наши услуги</a></li>
+						<li><a href="#">Расписание</a></li>
+						<li><a href="#">Остановки</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="footer_contacts">
+					<p>Астана, район Есиль, ул. Сыганак 54А, н.п.10</p>
+					<p>info.visitastana@gmail.com</p>
+				</div>
+			</div>
+			<div class="footer_copyright">&copy; 2024 Товарищество с ограниченной ответственностью «Visit Astana»</div>
+		</div>
+	</footer>
+</body>
+
+</html>

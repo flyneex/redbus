@@ -1,0 +1,78 @@
+:root {
+  --red: #d41411;
+  --white: #fff;
+  --black: #000;
+  --brown: #b3b3b3;
+}
+
+.schedule {
+  margin-bottom: 130px;
+}
+.schedule h4 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.03em;
+  margin-bottom: 55px;
+}
+.schedule_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 68px;
+}
+.schedule_item {
+  flex: calc(33.333% - 48px);
+  background-image: url("../assets/white2.png");
+  background-color: var(--white);
+  padding: 120px 59px;
+  text-align: center;
+}
+.schedule_item div:first-child {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
+}
+.schedule_item div:last-child {
+  font-size: 32px;
+  line-height: 38.4px;
+  letter-spacing: -0.03em;
+}
+.schedule_text {
+  padding: 0 260px;
+}
+.schedule_text h5 {
+  font-size: 32px;
+  line-height: 38.4px;
+  letter-spacing: -0.03em;
+  margin-bottom: 55px;
+}
+.schedule_text p {
+  font-size: 18px;
+  line-height: 25.2px;
+  letter-spacing: -0.03em;
+  margin-bottom: 55px;
+}
+.schedule_text ul {
+  list-style-position: inside;
+}
+.schedule_text ul li {
+  font-size: 18px;
+  line-height: 25.2px;
+  letter-spacing: -0.03em;
+  list-style-type: disc;
+}
+
+.map {
+  margin-bottom: 130px;
+}
+.map h4 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: -0.03em;
+  margin-bottom: 80px;
+}/*# sourceMappingURL=schedule.css.map */

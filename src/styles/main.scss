@@ -1,9 +1,4 @@
-:root {
-	--red: #d41411;
-	--white: #fff;
-	--black: #151227;
-	--brown: #b3b3b3;
-}
+@import './vars';
 
 * {
 	padding: 0;
@@ -41,7 +36,6 @@ html,
 body {
 	-webkit-font-smoothing: antialiased;
 	font-family: 'Euclid Flex', sans-serif;
-	color: var(--white);
 	line-height: 1.5;
 	font-weight: 400;
 	background-color: #fafafa;
@@ -73,13 +67,6 @@ h6 {
 	overflow-wrap: break-word;
 	font-size: unset;
 	font-weight: unset;
-}
-
-@mixin flex($display, $justify-content, $align-items, $gap) {
-	display: $display;
-	justify-content: $justify-content;
-	align-items: $align-items;
-	gap: $gap;
 }
 
 .wrapper {
@@ -130,6 +117,7 @@ h6 {
 		@include flex(flex, space-between, center, 0);
 	}
 	&_lang {
+		color: var(--white);
 		font-size: 20px;
 		line-height: 25.36px;
 		letter-spacing: -0.03em;
@@ -157,6 +145,48 @@ h6 {
 		border: 2px solid #ffffff1a;
 		border-radius: 88px;
 		padding: 24px 33px;
+	}
+}
+
+.header_red {
+	background-color: var(--red);
+	position: relative;
+	margin: 0 0 55px 0;
+	padding: 25px 0;
+	.header_num {
+		background-color: var(--white);
+		a {
+			color: var(--red);
+		}
+	}
+	.wrapper {
+		@include flex(flex, space-between, center, 0);
+	}
+}
+
+.breadcrums {
+	margin-bottom: 40px;
+	ul {
+		@include flex(flex, flex-start, center, 0);
+		li {
+			&::after {
+				content: url('../assets/caret.svg');
+				vertical-align: sub;
+				margin: 0 10px;
+			}
+			&:last-child::after {
+				content: none;
+			}
+			a {
+				font-size: 14px;
+				line-height: 16.8px;
+				letter-spacing: -0.03em;
+				color: var(--brown);
+				&.active {
+					color: var(--black);
+				}
+			}
+		}
 	}
 }
 

@@ -1,0 +1,217 @@
+@import './vars';
+
+.cart {
+	margin-bottom: 130px;
+	&_title {
+		h4 {
+			font-size: 40px;
+			font-weight: 700;
+			line-height: 48px;
+			letter-spacing: -0.03em;
+			margin-bottom: 80px;
+		}
+	}
+	&_pretext {
+		font-size: 32px;
+		font-weight: 400;
+		line-height: 38.4px;
+		letter-spacing: -0.03em;
+		margin-bottom: 55px;
+	}
+	&_box {
+		@include flex(flex, flex-start, flex-start, 49px);
+		margin-bottom: 80px;
+	}
+	&_list {
+		flex: calc(65% - 49px);
+	}
+	&_item {
+		@include flex(flex, flex-start, center, 0);
+		margin-bottom: 30px;
+		background-color: var(--white);
+	}
+	&_img {
+		background-image: url('../assets/redcart.png');
+		background-color: var(--red);
+		padding: 106px 84px;
+		img {
+			max-width: none;
+		}
+	}
+	&_product {
+		padding: 0 30px;
+		h4 {
+			font-size: 32px;
+			font-weight: 700;
+			line-height: 38.4px;
+			letter-spacing: -0.03em;
+			color: var(--red);
+			text-transform: uppercase;
+			margin-bottom: 10px;
+		}
+		p {
+			font-size: 24px;
+			line-height: 28.8px;
+			letter-spacing: -0.03em;
+			margin-bottom: 30px;
+		}
+		div {
+			@include flex(flex, space-between, center, 0);
+			span {
+				font-size: 24px;
+				font-weight: 300;
+				line-height: 28.8px;
+				letter-spacing: -0.03em;
+				color: var(--red);
+			}
+			div {
+				padding: 15px 18px;
+				border: 1px solid var(--red);
+				border-radius: 44px;
+				button {
+					color: var(--red);
+				}
+			}
+		}
+		input {
+			width: 60px;
+			text-align: center;
+		}
+		button {
+			background-color: transparent;
+			width: 20px;
+			cursor: pointer;
+		}
+	}
+	&_total {
+		flex: calc(35% - 49px);
+		background-color: var(--white);
+		box-shadow: 0px 8px 30px 0px #0000000d;
+		padding: 50px;
+		p {
+			font-size: 24px;
+			font-weight: 400;
+			line-height: 28.8px;
+			letter-spacing: -0.03em;
+			margin-bottom: 30px;
+		}
+		div:nth-child(2) {
+			@include flex(flex, space-between, center, 0);
+			margin-bottom: 50px;
+			span:first-child {
+				font-size: 32px;
+				font-weight: 700;
+				line-height: 38.4px;
+				letter-spacing: -0.03em;
+			}
+			span:last-child {
+				font-size: 32px;
+				font-weight: 300;
+				line-height: 38.4px;
+				letter-spacing: -0.03em;
+			}
+		}
+		button {
+			width: 100%;
+			color: var(--white);
+			font-size: 20px;
+			font-weight: 600;
+			line-height: 25.36px;
+			letter-spacing: -0.03em;
+			background-color: var(--red);
+			border-radius: 90px;
+			padding: 35px 110px;
+			cursor: pointer;
+		}
+	}
+	&_payment {
+		max-width: 998px;
+		margin-bottom: 80px;
+		h4 {
+			font-size: 40px;
+			font-weight: 700;
+			line-height: 48px;
+			letter-spacing: -0.03em;
+			margin-bottom: 55px;
+		}
+		&_item {
+			@include flex(flex, space-between, center, 0);
+			background-color: var(--white);
+			padding: 35px 30px;
+			box-shadow: 0px 8px 30px 0px #0000000d;
+			margin-bottom: 20px;
+			> div {
+				@include flex(flex, space-between, center, 25px);
+				p {
+					font-size: 24px;
+					line-height: 28.8px;
+					letter-spacing: -0.03em;
+				}
+			}
+		}
+	}
+	&_form {
+		max-width: 998px;
+		h5 {
+			font-size: 32px;
+			line-height: 38.4px;
+			letter-spacing: -0.03em;
+			margin-bottom: 15px;
+			&::after {
+				content: url('../assets/Circle_Warning.svg');
+				margin-left: 20px;
+			}
+		}
+		p {
+			font-size: 20px;
+			line-height: 24px;
+			letter-spacing: -0.03em;
+			margin-bottom: 55px;
+		}
+		form {
+			margin-bottom: 27px;
+			input {
+				display: block;
+				border: 1px solid #2d2d2d;
+				margin-bottom: 10px;
+				padding: 17px 25px 19px 25px;
+				width: 100%;
+				&:placeholder {
+					font-size: 18px;
+					line-height: 21.6px;
+					letter-spacing: -0.03em;
+				}
+				&[type='checkbox'] {
+					width: unset;
+					margin-bottom: 0;
+				}
+			}
+			div:first-of-type {
+				@include flex(flex, flex-start, center, 10px);
+				margin-top: 27px;
+			}
+			p {
+				font-size: 18px;
+				line-height: 21.6px;
+				letter-spacing: -0.03em;
+				margin-bottom: 0;
+				a {
+					color: var(--black);
+					border-bottom: 1px solid #2d2d2d;
+				}
+			}
+			button {
+				color: var(--white);
+				font-size: 20px;
+				font-weight: 600;
+				line-height: 25.36px;
+				letter-spacing: -0.03em;
+				background-color: var(--red);
+				border-radius: 90px;
+				padding: 35px 110px;
+				margin-top: 55px;
+				cursor: pointer;
+			}
+		}
+	}
+}

@@ -1,0 +1,107 @@
+@import './vars';
+
+.tickets {
+	margin-bottom: 80px;
+	h4 {
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 48px;
+		letter-spacing: -0.03em;
+		margin-bottom: 80px;
+	}
+	&_box {
+		@include flex(flex, flex-start, center, 49px);
+		margin-bottom: 40px;
+	}
+	&_item {
+		padding: 92px 65px;
+		background-image: url(../assets/white2.png);
+		background-color: var(--white);
+		flex: calc(33.333% - 49px);
+		div {
+		}
+		div:first-child {
+			text-transform: uppercase;
+			font-size: 32px;
+			font-weight: 700;
+			line-height: 38.4px;
+			letter-spacing: -0.03em;
+		}
+		div:last-child {
+			font-size: 32px;
+			font-weight: 300;
+			line-height: 38.4px;
+			letter-spacing: -0.03em;
+		}
+	}
+	&_item:nth-child(2n + 1) {
+		padding: 130px 98px;
+		background-color: var(--red);
+		background-image: url(../assets/red2.png);
+		div {
+			color: var(--white);
+		}
+	}
+	button {
+		background-color: var(--red);
+		color: var(--white);
+		padding: 35px 90px;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 25.36px;
+		letter-spacing: -0.03em;
+		border-radius: 90px;
+		cursor: pointer;
+		&::after {
+			content: url('../assets/ticket.svg');
+			margin-left: 10px;
+		}
+	}
+	&_btn:last-child {
+		@include flex(flex, center, center, 0);
+	}
+}
+
+.expo {
+	margin-bottom: 130px;
+	&_text {
+		font-size: 18px;
+		line-height: 25.2px;
+		letter-spacing: -0.03em;
+		margin-bottom: 50px;
+	}
+	&_info {
+		@include flex(flex, space-between, center, 0);
+		margin-bottom: 50px;
+		div {
+			display: flex;
+
+			font-size: 36px;
+			line-height: 50.4px;
+			letter-spacing: -0.03em;
+			&:first-child::before {
+				content: url('../assets/pin_red.svg');
+				margin-right: 10px;
+			}
+			&:nth-child(2)::before {
+				content: url('../assets/globe_red.svg');
+				margin-right: 10px;
+			}
+			&:last-child::before {
+				content: url('../assets/rainbow_red.svg');
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+.map {
+	margin-bottom: 130px;
+	h4 {
+		font-size: 40px;
+		font-weight: 700;
+		line-height: 44px;
+		letter-spacing: -0.03em;
+		margin-bottom: 80px;
+	}
+}

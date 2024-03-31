@@ -1,7 +1,7 @@
 :root {
   --red: #d41411;
   --white: #fff;
-  --black: #151227;
+  --black: #000;
   --brown: #b3b3b3;
 }
 
@@ -40,7 +40,6 @@ html,
 body {
   -webkit-font-smoothing: antialiased;
   font-family: "Euclid Flex", sans-serif;
-  color: var(--white);
   line-height: 1.5;
   font-weight: 400;
   background-color: #fafafa;
@@ -130,6 +129,7 @@ h6 {
   gap: 0;
 }
 .header_lang {
+  color: var(--white);
   font-size: 20px;
   line-height: 25.36px;
   letter-spacing: -0.03em;
@@ -157,6 +157,52 @@ h6 {
   border: 2px solid rgba(255, 255, 255, 0.1019607843);
   border-radius: 88px;
   padding: 24px 33px;
+}
+
+.header_red {
+  background-color: var(--red);
+  position: relative;
+  margin: 0 0 55px 0;
+  padding: 25px 0;
+}
+.header_red .header_num {
+  background-color: var(--white);
+}
+.header_red .header_num a {
+  color: var(--red);
+}
+.header_red .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+}
+
+.breadcrums {
+  margin-bottom: 40px;
+}
+.breadcrums ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+}
+.breadcrums ul li::after {
+  content: url("../assets/caret.svg");
+  vertical-align: sub;
+  margin: 0 10px;
+}
+.breadcrums ul li:last-child::after {
+  content: none;
+}
+.breadcrums ul li a {
+  font-size: 14px;
+  line-height: 16.8px;
+  letter-spacing: -0.03em;
+  color: var(--brown);
+}
+.breadcrums ul li a.active {
+  color: var(--black);
 }
 
 .billboard {

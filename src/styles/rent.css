@@ -1,0 +1,84 @@
+:root {
+  --red: #d41411;
+  --white: #fff;
+  --black: #000;
+  --brown: #b3b3b3;
+}
+
+.rent {
+  margin-bottom: 130px;
+}
+.rent h4 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.03em;
+  margin-bottom: 80px;
+}
+.rent_slider {
+  margin-bottom: 60px;
+}
+.rent_text {
+  padding: 0 260px;
+  margin-bottom: 60px;
+}
+.rent_text p {
+  font-size: 18px;
+  line-height: 25.2px;
+  letter-spacing: -0.03em;
+  margin-bottom: 30px;
+}
+.rent_box {
+  padding: 0 260px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.rent_item {
+  flex: calc(50% - 50px);
+  text-align: center;
+}
+.rent_item div:first-child {
+  font-size: 32px;
+  line-height: 38.4px;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+}
+.rent_item div:nth-child(2) {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  letter-spacing: -0.03em;
+}
+.rent_item:first-child, .rent_item:nth-child(2) {
+  background-image: url("../assets/red3.png");
+  background-color: var(--red);
+  padding: 61px 96px;
+  color: var(--white);
+}
+.rent_item:last-child, .rent_item:nth-child(3) {
+  background-image: url("../assets/white3.png");
+  background-color: var(--white);
+  padding: 73px 151px;
+  color: var(--black);
+}
+.rent_btn {
+  margin-top: 30px;
+}
+.rent_btn button {
+  font-size: 18px;
+  line-height: 22.82px;
+  letter-spacing: -0.03em;
+  padding: 25px 40px;
+  color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 90px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.rent_btn button::after {
+  content: url("../assets/arrowwhite.svg");
+  margin-left: 10px;
+}/*# sourceMappingURL=rent.css.map */

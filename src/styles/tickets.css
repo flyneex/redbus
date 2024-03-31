@@ -1,0 +1,118 @@
+:root {
+  --red: #d41411;
+  --white: #fff;
+  --black: #000;
+  --brown: #b3b3b3;
+}
+
+.tickets {
+  margin-bottom: 80px;
+}
+.tickets h4 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.03em;
+  margin-bottom: 80px;
+}
+.tickets_box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 49px;
+  margin-bottom: 40px;
+}
+.tickets_item {
+  padding: 92px 65px;
+  background-image: url(../assets/white2.png);
+  background-color: var(--white);
+  flex: calc(33.333% - 49px);
+}
+.tickets_item div:first-child {
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  letter-spacing: -0.03em;
+}
+.tickets_item div:last-child {
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 38.4px;
+  letter-spacing: -0.03em;
+}
+.tickets_item:nth-child(2n+1) {
+  padding: 130px 98px;
+  background-color: var(--red);
+  background-image: url(../assets/red2.png);
+}
+.tickets_item:nth-child(2n+1) div {
+  color: var(--white);
+}
+.tickets button {
+  background-color: var(--red);
+  color: var(--white);
+  padding: 35px 90px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25.36px;
+  letter-spacing: -0.03em;
+  border-radius: 90px;
+  cursor: pointer;
+}
+.tickets button::after {
+  content: url("../assets/ticket.svg");
+  margin-left: 10px;
+}
+.tickets_btn:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+
+.expo {
+  margin-bottom: 130px;
+}
+.expo_text {
+  font-size: 18px;
+  line-height: 25.2px;
+  letter-spacing: -0.03em;
+  margin-bottom: 50px;
+}
+.expo_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 50px;
+}
+.expo_info div {
+  display: flex;
+  font-size: 36px;
+  line-height: 50.4px;
+  letter-spacing: -0.03em;
+}
+.expo_info div:first-child::before {
+  content: url("../assets/pin_red.svg");
+  margin-right: 10px;
+}
+.expo_info div:nth-child(2)::before {
+  content: url("../assets/globe_red.svg");
+  margin-right: 10px;
+}
+.expo_info div:last-child::before {
+  content: url("../assets/rainbow_red.svg");
+  margin-right: 10px;
+}
+
+.map {
+  margin-bottom: 130px;
+}
+.map h4 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: -0.03em;
+  margin-bottom: 80px;
+}/*# sourceMappingURL=tickets.css.map */
