@@ -1,1 +1,504 @@
-/*# sourceMappingURL=responsive.css.map */
+:root {
+  --red: #d41411;
+  --white: #fff;
+  --black: #000;
+  --brown: #b3b3b3;
+}
+
+@media only screen and (min-width: 576px) {
+  .header_mobnum {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1515px) {
+  .wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .header_logo div:first-child {
+    font-size: 27px;
+    line-height: normal;
+  }
+  .header_logo div:last-child {
+    font-size: 8px;
+    line-height: normal;
+  }
+  .header .wrapper {
+    gap: 45px;
+  }
+  .header_nav ul {
+    display: none;
+  }
+  .header_lang {
+    font-size: 14px;
+    line-height: 17.75px;
+    letter-spacing: -0.03em;
+  }
+  .header_num {
+    display: none;
+  }
+  .header_mobnum a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17.75px;
+    letter-spacing: -0.03em;
+    color: var(--white);
+    background-color: var(--red);
+    padding: 15px 0;
+    border-radius: 88px;
+    margin-bottom: 40px;
+  }
+  .header_cart {
+    padding: 15px 20px;
+  }
+  .header_bar {
+    flex: 0 0 auto;
+  }
+  .header.header_red {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  .header_bar {
+    display: block !important;
+  }
+  .mobile_menu.header {
+    margin-top: 0;
+  }
+  .mobile_menu.wrapper {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0;
+  }
+  .mobile_menu {
+    position: fixed;
+    background-image: url(../assets/mmenu_bg.png);
+    background-color: var(--red);
+    flex-direction: column;
+    padding: 27px 30px;
+    margin: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+  }
+  .mobile_menu .header_bar,
+  .mobile_menu .header_cart,
+  .mobile_menu .header_utils {
+    display: none;
+  }
+  .mobile_menu .header_logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 211px;
+  }
+  .mobile_menu .header_nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mobile_menu .header_nav ul li a {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 50.72px;
+    letter-spacing: -0.03em;
+  }
+  .mobile_menu .mobile_cross {
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 30px;
+  }
+  .rent_button {
+    position: static;
+    transform: none;
+    margin-top: 40px;
+  }
+  .rent_button button {
+    padding: 20px 0;
+    width: 100%;
+    box-shadow: none;
+  }
+  .cart_box, .cart_item {
+    flex-direction: column;
+  }
+  .cart_box {
+    align-items: stretch;
+    gap: 20px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .tickets {
+    margin-bottom: 40px;
+  }
+  .tickets h4 {
+    font-size: 32px;
+    line-height: 38.4px;
+    margin-bottom: 40px;
+  }
+  .tickets_item {
+    width: 100%;
+    padding: 38px 52px;
+  }
+  .tickets_item div:first-child {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .tickets_item div:last-child {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .tickets_item:nth-child(2n+1) {
+    padding: 71px 81px;
+  }
+  .tickets_box {
+    flex-direction: column;
+  }
+  .tickets_btn a {
+    width: 100%;
+  }
+  .tickets_btn a button {
+    font-size: 20px;
+    line-height: 25.36px;
+    padding: 20px 0;
+    width: 100%;
+  }
+  .expo_info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .expo_info div {
+    font-size: 24px;
+    line-height: 33.6px;
+    align-items: center;
+  }
+  .expo_text p {
+    font-size: 18px;
+    line-height: 25.2px;
+  }
+  .ticket_slider {
+    margin-bottom: 80px;
+  }
+  .ticket_slider .swiper-slide {
+    width: 321px !important;
+  }
+  .ticket_slider .swiper-button-next {
+    right: 10%;
+  }
+  .map h4 {
+    font-size: 32px;
+    line-height: 35.2px;
+    margin-bottom: 38px;
+  }
+  .footer_box {
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 55px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .header {
+    margin-top: 25px;
+  }
+  .header_red + .header_mobnum {
+    padding-top: 0;
+  }
+  .header_mobnum {
+    padding-top: 99px;
+    width: 100%;
+  }
+  .billboard {
+    background-size: cover;
+    background-position: 70% center;
+    flex-direction: column;
+  }
+  .billboard_info {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 35px;
+    margin-bottom: 75px;
+  }
+  .billboard_info h1 {
+    font-size: 36px;
+    line-height: 39.6px;
+  }
+  .billboard_info p {
+    font-size: 20px;
+    line-height: 25.36px;
+  }
+  .billboard_info button {
+    width: 100%;
+    font-size: 14px;
+    line-height: 17.75px;
+    padding: 22px 0;
+  }
+  .tour {
+    display: block;
+    margin-bottom: 80px;
+  }
+  .tour_info {
+    width: 100%;
+    padding: 29px 37px;
+  }
+  .tour_info h3 {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .tour_info button:first-child {
+    font-size: 20px;
+    line-height: 25.36px;
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 15px;
+  }
+  .tour_info button:last-child {
+    font-size: 14px;
+    line-height: 17.75px;
+    width: 100%;
+    padding: 22.5px 0;
+  }
+  .tour_info p {
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+  .tour_tickets, .tour_schedule {
+    width: 100%;
+    padding: 67px 31px;
+  }
+  .tour_tickets h5, .tour_schedule h5 {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .tour_tickets button, .tour_schedule button {
+    font-size: 15px;
+    line-height: 19.02px;
+    padding: 22.5px 40px;
+  }
+  .tour_tickets div, .tour_schedule div {
+    width: 270px;
+  }
+  .tour_rent {
+    width: 100%;
+    padding: 77px 30px;
+    background-size: cover;
+  }
+  .tour_rent h5 {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .tour_rent p {
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+  .tour_rent button {
+    font-size: 14px;
+    line-height: 17.75px;
+    padding: 23px 40px;
+  }
+  .audiogid {
+    margin-bottom: 80.5px;
+  }
+  .audiogid h4 {
+    font-size: 32px;
+    line-height: 35.2px;
+    margin-bottom: 58px;
+  }
+  .audiogid_logos {
+    gap: 5px;
+  }
+  .faq {
+    margin-bottom: 91px;
+  }
+  .faq h4 {
+    line-height: 35.2px;
+    margin-bottom: 40px;
+  }
+  .faq_title {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .faq_content {
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+  .socials {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 31px;
+    margin-bottom: 40px;
+  }
+  .socials_insta > div:first-child {
+    width: 63px;
+    height: 63px;
+    padding: 16px;
+  }
+  .socials_insta > div:last-child div:first-child {
+    font-size: 16px;
+    line-height: 17.6px;
+  }
+  .socials_insta > div:last-child div:last-child {
+    font-size: 36px;
+    line-height: 39.6px;
+  }
+  .socials_publish {
+    gap: 50px;
+  }
+  .socials_publish div > div:first-child {
+    font-size: 24px;
+    line-height: 30.43px;
+  }
+  .socials_publish div > div:last-child {
+    font-size: 16px;
+    line-height: 20.29px;
+  }
+  .socials_btn {
+    width: 100%;
+  }
+  .socials_btn button {
+    width: inherit;
+    padding: 20px 0;
+  }
+  .instagram {
+    margin-bottom: 80px;
+  }
+  .instagram div {
+    flex: 0 0 100%;
+  }
+  .instagram div img {
+    width: 100%;
+  }
+  .rent {
+    margin-bottom: 80px;
+  }
+  .rent h4 {
+    font-size: 32px;
+    line-height: 38.4px;
+    margin-bottom: 40px;
+  }
+  .rent_text p {
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+  .rent_box {
+    padding: 0;
+  }
+  .rent_item {
+    padding: 67px 43px;
+    flex: 0 0 100%;
+  }
+  .rent_item:first-child, .rent_item:nth-child(2) {
+    padding: 66px 43px;
+  }
+  .rent_item div:first-child {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .rent_item div:nth-child(2) {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .rent_item:last-child, .rent_item:nth-child(3) {
+    padding: 78px 119px;
+  }
+  .rent_btn {
+    margin-top: 39px;
+    width: 100%;
+  }
+  .rent_btn button {
+    font-size: 18px;
+    line-height: 22.82px;
+    padding: 20.5px 0;
+    width: inherit;
+  }
+  .cart {
+    margin-bottom: 80px;
+  }
+  .cart_item {
+    align-items: unset;
+  }
+  .cart_list, .cart_total {
+    flex: 100%;
+  }
+  .cart_pretext {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .cart_product {
+    padding: 31px 46px;
+    background-color: var(--white);
+  }
+  .cart_product h4 {
+    font-size: 24px;
+    line-height: 28.8px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .cart_product p {
+    font-size: 14px;
+    line-height: 16.8px;
+    margin-bottom: 30px;
+  }
+  .cart_product > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cart_product > div span {
+    font-size: 24px;
+    line-height: 28.8px;
+    margin-bottom: 18px;
+  }
+  .cart_img {
+    display: flex;
+    justify-content: center;
+    background-image: url("../assets/red_mobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 47px 0;
+  }
+  .cart_total {
+    padding: 30px 25px;
+  }
+  .cart_total p {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .cart_total .total_btn button {
+    padding: 25px 0;
+  }
+  .cart_payment h4 {
+    font-size: 32px;
+    line-height: 38.4px;
+  }
+  .cart_payment_item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 27px;
+  }
+  .cart_payment_item > div p {
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+  .cart_form form button {
+    padding: 20px 0;
+    width: 100%;
+  }
+  .checkbox-view {
+    flex: 0 0 auto;
+  }
+  .footer_nav ul {
+    flex-direction: column;
+  }
+  .footer_contacts {
+    text-align: center;
+  }
+  .footer_copyright {
+    text-align: center;
+    width: 293px;
+    margin: auto;
+  }
+}/*# sourceMappingURL=responsive.css.map */

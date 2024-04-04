@@ -7,6 +7,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="./styles/stylesheet.css">
 	<link rel="stylesheet" href="./styles/main.css">
+	<link rel="stylesheet" href="./styles/responsive.css">
 </head>
 
 <body>
@@ -33,8 +34,23 @@
 			</div>
 			<div class="header_cart"><img src="./assets/cart.svg" alt="Cart"></div>
 		</div>
+		<div class="header_bar">
+			<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M8.33337 28.3333H31.6667M8.33337 20H31.6667M8.33337 11.6667H31.6667" stroke="white" stroke-width="2"
+					stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</div>
+		<div class="mobile_cross">
+			<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M29.9999 29.9999L20 20M20 20L10 10M20 20L30.0001 10M20 20L10 30.0001" stroke="white" stroke-width="2"
+					stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</div>
 	</header>
 	<div class="billboard">
+		<div class="header_mobnum wrapper">
+			<a href="tel:+77775557575">+7 777 555 7575</a>
+		</div>
 		<div class='billboard_info'>
 			<h1>Экскурсии по городу Астана</h1>
 			<p>на двухэтажных автобусах Red Bus</p>
@@ -49,8 +65,8 @@
 				</div>
 				<div><button>Купить билет</button><button>Подробнее</button></div>
 				<div>
-					<p>Пожалуйста, уточняйте подробную и обновленную информацию
-						в Call-центре <a href="tel:+77775557575">+7 777 555 7575</a></p>
+					<p>Пожалуйста, уточняйте подробную и обновленную информацию в Call-центре <a href="tel:+77775557575">+7 777
+							555 7575</a></p>
 				</div>
 			</div>
 			<div class="tour_tickets">
@@ -61,7 +77,7 @@
 			</div>
 			<div class="tour_schedule">
 				<div>
-					<h5>Расписание Red Bus</h5>
+					<h5>Расписание <br> Red Bus</h5>
 				</div>
 				<div><button>Подробнее</button></div>
 			</div>
@@ -94,19 +110,21 @@
 				<div><img src="./assets/tr.jpg" alt="Tr"></div>
 			</div>
 		</section>
-		<section>
-			<div class="faq wrapper">
-				<div>
-					<h4>Вопрос / Ответ</h4>
+		<section class="faq wrapper">
+			<div>
+				<h4>Вопрос / Ответ</h4>
+			</div>
+			<div class="faq_body">
+				<div class="faq_title">Где можно купить билеты?</div>
+				<div class="faq_content">Вы можете приобрести билеты непосредственно у водителя в автобусе или купить
+					онлайн
+					на нашем сайте.
 				</div>
-				<div>
-					<summary>Где можно купить билеты?</summary>
-					<details>Вы можете приобрести билеты непосредственно у водителя в автобусе или купить онлайн на нашем сайте.
-					</details>
-				</div>
-				<div>
-					<summary>Как арендовать автобус на свадьбу?</summary>
-					<details>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, magni.</details>
+			</div>
+			<div class="faq_body">
+				<div class="faq_title">Как арендовать автобус на свадьбу?</div>
+				<div class="faq_content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum maiores enim nulla
+					nam quasi fuga consectetur officiis voluptas quibusdam. Sequi?
 				</div>
 			</div>
 		</section>
@@ -177,6 +195,7 @@
 			<div class="footer_copyright">&copy; 2024 Товарищество с ограниченной ответственностью «Visit Astana»</div>
 		</div>
 	</footer>
+	<script src='./scripts/script.js'></script>
 </body>
 
 </html>

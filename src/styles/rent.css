@@ -16,10 +16,71 @@
   margin-bottom: 80px;
 }
 .rent_slider {
+  position: relative;
   margin-bottom: 60px;
 }
+.rent_slider .swiper-button-prev,
+.rent_slider .swiper-button-next {
+  width: 48px;
+  height: 48px;
+}
+.rent_slider .swiper-button-prev:hover::after,
+.rent_slider .swiper-button-next:hover::after {
+  background-color: var(--red);
+  color: var(--white);
+}
+.rent_slider .swiper-button-prev {
+  left: -23px;
+}
+.rent_slider .swiper-button-next {
+  right: -23px;
+}
+.rent_slider .swiper-button-prev:after {
+  content: url(../assets/Caret_Left_SM.svg);
+  background-color: var(--white);
+  padding: 12px;
+  border-radius: 50%;
+  line-height: 0;
+  box-shadow: 0px 4px 80px 0px rgba(0, 0, 0, 0.1019607843);
+  -webkit-box-shadow: 0px 4px 80px 0px rgba(0, 0, 0, 0.1019607843);
+}
+.rent_slider .swiper-button-next:after {
+  content: url(../assets/Caret_Left_SM.svg);
+  transform: rotate(180deg);
+  background-color: var(--white);
+  padding: 12px;
+  border-radius: 50%;
+  line-height: 0;
+  box-shadow: 0px 4px 80px 0px rgba(0, 0, 0, 0.1019607843);
+  -webkit-box-shadow: 0px 4px 80px 0px rgba(0, 0, 0, 0.1019607843);
+}
+.rent_button {
+  position: absolute;
+  left: 50%;
+  bottom: 60px;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.rent_button button {
+  color: var(--white);
+  background-color: var(--red);
+  font-size: 20px;
+  line-height: 25.36px;
+  letter-spacing: -0.03em;
+  padding: 35px 90px;
+  border-radius: 90px;
+  cursor: pointer;
+  box-shadow: 0px 16px 20px 0px rgba(0, 0, 0, 0.3411764706);
+  -webkit-box-shadow: 0px 16px 20px 0px rgba(0, 0, 0, 0.3411764706);
+}
+.rent_button button::after {
+  content: url("../assets/arrowwhite.svg");
+  margin-left: 10px;
+  vertical-align: middle;
+}
 .rent_text {
-  padding: 0 260px;
+  max-width: 996px;
+  margin: 0 auto;
   margin-bottom: 60px;
 }
 .rent_text p {
@@ -29,7 +90,8 @@
   margin-bottom: 30px;
 }
 .rent_box {
-  padding: 0 260px;
+  max-width: 996px;
+  margin: 0 auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -55,12 +117,14 @@
 .rent_item:first-child, .rent_item:nth-child(2) {
   background-image: url("../assets/red3.png");
   background-color: var(--red);
+  background-size: cover;
   padding: 61px 96px;
   color: var(--white);
 }
 .rent_item:last-child, .rent_item:nth-child(3) {
   background-image: url("../assets/white3.png");
   background-color: var(--white);
+  background-size: cover;
   padding: 73px 151px;
   color: var(--black);
 }

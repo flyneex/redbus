@@ -8,10 +8,11 @@
 	<link rel="stylesheet" href="./styles/stylesheet.css">
 	<link rel="stylesheet" href="./styles/main.css">
 	<link rel="stylesheet" href="./styles/cart.css">
+	<link rel="stylesheet" href="./styles/responsive.css">
 </head>
 
 <body>
-	<header class='header_red'>
+	<header class='header header_red'>
 		<div class="wrapper">
 			<div class="header_logo">
 				<a href="#">
@@ -35,8 +36,23 @@
 				</div>
 				<div class="header_cart"><img src="./assets/cart.svg" alt="Cart"></div>
 			</div>
+			<div class="header_bar">
+				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M8.33337 28.3333H31.6667M8.33337 20H31.6667M8.33337 11.6667H31.6667" stroke="white" stroke-width="2"
+						stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</div>
+			<div class="mobile_cross">
+				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M29.9999 29.9999L20 20M20 20L10 10M20 20L30.0001 10M20 20L10 30.0001" stroke="white" stroke-width="2"
+						stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</div>
 		</div>
 	</header>
+	<div class="header_mobnum wrapper">
+		<a href="tel:+77775557575">+7 777 555 7575</a>
+	</div>
 	<div class="breadcrums wrapper">
 		<ul>
 			<li><a href="#">Главная</a></li>
@@ -133,36 +149,76 @@
 					<h4>Оформление заказа</h4>
 				</div>
 				<div class="cart_payment_item">
-					<div>
-						<input type="checkbox" name="" id="" checked>
-						<p>Оплата банковской картой - Шлюз №1 (CloudPayments)</p>
+					<div class="cart_payment_name">
+						<label for="checkbox" class="checkbox-label">
+							<input type="checkbox" id="checkbox" class="checkbox" checked>
+							<span class="checkbox-view">
+								<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M3.16675 9.49998L7.0853 13.4185L15.4829 5.02173" stroke="white" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<p>Оплата банковской картой - Шлюз №1 (CloudPayments)</p>
+						</label>
 					</div>
 					<div><img src="./assets/visa.jpg" alt="Payments Logo"></div>
 				</div>
 				<div class="cart_payment_item">
-					<div>
-						<input type="checkbox" name="" id="">
-						<p>Оплата банковской картой- Шлюз №2 (TarlanPayments)</p>
+					<div class="cart_payment_name">
+						<label for="checkbox1" class="checkbox-label">
+							<input type="checkbox" id="checkbox1" class="checkbox">
+							<span class="checkbox-view">
+								<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M3.16675 9.49998L7.0853 13.4185L15.4829 5.02173" stroke="white" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<p>Оплата банковской картой- Шлюз №2 (TarlanPayments)</p>
+						</label>
 					</div>
 					<div><img src="./assets/visa.jpg" alt="Payments Logo"></div>
 				</div>
 				<div class="cart_payment_item">
-					<div>
-						<input type="checkbox" name="" id="">
-						<p>Оплата по номеру телефона</p>
+					<div class="cart_payment_name">
+						<label for="checkbox2" class="checkbox-label">
+							<input type="checkbox" id="checkbox2" class="checkbox">
+							<span class="checkbox-view">
+								<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M3.16675 9.49998L7.0853 13.4185L15.4829 5.02173" stroke="white" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<p>Оплата по номеру телефона</p>
+						</label>
 					</div>
 				</div>
 				<div class="cart_payment_item">
-					<div>
-						<input type="checkbox" name="" id="">
-						<p>Оплата с Kaspi QR</p>
+					<div class="cart_payment_name">
+						<label for="checkbox3" class="checkbox-label">
+							<input type="checkbox" id="checkbox3" class="checkbox">
+							<span class="checkbox-view">
+								<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M3.16675 9.49998L7.0853 13.4185L15.4829 5.02173" stroke="white" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<p>Оплата с Kaspi QR</p>
+						</label>
 					</div>
 					<div><img src="./assets/kaspi-bank.jpg" alt="Payments Logo"></div>
 				</div>
 				<div class="cart_payment_item">
-					<div>
-						<input type="checkbox" name="" id="">
-						<p>Перевод на карту МИР</p>
+					<div class="cart_payment_name">
+						<label for="checkbox4" class="checkbox-label">
+							<input type="checkbox" id="checkbox4" class="checkbox">
+							<span class="checkbox-view">
+								<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M3.16675 9.49998L7.0853 13.4185L15.4829 5.02173" stroke="white" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</span>
+							<p>Перевод на карту МИР</p>
+						</label>
 					</div>
 					<div><img src="./assets/mir.jpg" alt="Payments Logo"></div>
 				</div>
@@ -178,9 +234,17 @@
 						<input type="text" placeholder='Ваше телефон *' required>
 						<input type="text" placeholder='Ваш e-mail *' required>
 						<div>
-							<input type="checkbox" name="" id="">
-							<p>Я согласен с <a href="https://astana.citypass.kz/ru/kupit-citypass" target='_blank'>правилами и
-									условиями</a> citypass.kz</p>
+							<label for="checkbox5" class="checkbox-label">
+								<input type="checkbox" id="checkbox5" class="checkbox" checked>
+								<span class="checkbox-view">
+									<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M3.16675 9.49998L7.0853 13.4185L15.4829 5.02173" stroke="white" stroke-width="2"
+											stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+								</span>
+								<p>Я согласен с <a href="https://astana.citypass.kz/ru/kupit-citypass" target='_blank'>правилами и
+										условиями</a> citypass.kz</p>
+							</label>
 						</div>
 						<div><button>Перейти к оплате</button></div>
 					</form>
@@ -214,6 +278,7 @@
 			<div class="footer_copyright">&copy; 2024 Товарищество с ограниченной ответственностью «Visit Astana»</div>
 		</div>
 	</footer>
+	<script src='./scripts/script.js'></script>
 </body>
 
 </html>

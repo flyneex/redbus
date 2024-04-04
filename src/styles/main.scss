@@ -39,6 +39,7 @@ body {
 	line-height: 1.5;
 	font-weight: 400;
 	background-color: #fafafa;
+	position: relative;
 }
 
 img,
@@ -67,6 +68,11 @@ h6 {
 	overflow-wrap: break-word;
 	font-size: unset;
 	font-weight: unset;
+}
+
+button:hover {
+	background-color: var(--white) !important;
+	color: var(--black) !important;
 }
 
 .wrapper {
@@ -123,6 +129,7 @@ h6 {
 		letter-spacing: -0.03em;
 		text-align: left;
 		margin-right: 50px;
+		cursor: pointer;
 		span::after {
 			content: url('../assets/shevron.svg');
 			margin-left: 10px;
@@ -142,9 +149,15 @@ h6 {
 		}
 	}
 	&_cart {
+		flex: 1 0 auto;
 		border: 2px solid #ffffff1a;
 		border-radius: 88px;
 		padding: 24px 33px;
+		cursor: pointer;
+	}
+	.mobile_cross,
+	.header_bar {
+		display: none;
 	}
 }
 
@@ -160,6 +173,7 @@ h6 {
 		}
 	}
 	.wrapper {
+		width: 100%;
 		@include flex(flex, space-between, center, 0);
 	}
 }
@@ -201,6 +215,7 @@ h6 {
 		margin-top: calc(60px + 75px + 208px);
 		margin-bottom: 207px;
 		h1 {
+			color: var(--white);
 			font-size: 96px;
 			font-weight: 700;
 			line-height: 105.6px;
@@ -209,6 +224,7 @@ h6 {
 			text-transform: uppercase;
 		}
 		p {
+			color: var(--white);
 			font-size: 40px;
 			font-weight: 300;
 			line-height: 50.72px;
@@ -226,6 +242,7 @@ h6 {
 			border-radius: 90px;
 			color: var(--white);
 			background-color: transparent;
+			cursor: pointer;
 			&::after {
 				content: url('../assets/arrowwhite.svg');
 				margin-left: 10px;
@@ -237,7 +254,7 @@ h6 {
 .tour {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(2, 1fr);
+	grid-template-rows: repeat(2, auto);
 	margin-bottom: 130px;
 	&_info {
 		background-image: url('../assets/baiterek.jpg');
@@ -246,6 +263,7 @@ h6 {
 		grid-row: 1/-1;
 		padding: 235px 142px;
 		h3 {
+			color: var(--white);
 			font-size: 48px;
 			line-height: 57.6px;
 			letter-spacing: -0.03em;
@@ -262,6 +280,7 @@ h6 {
 				font-weight: 600;
 				line-height: 25.36px;
 				letter-spacing: -0.03em;
+				cursor: pointer;
 				&::after {
 					content: url('../assets/ticket.svg');
 					margin-left: 10px;
@@ -275,6 +294,7 @@ h6 {
 				line-height: 25.36px;
 				letter-spacing: -0.03em;
 				border: 2px solid #ffffff1a;
+				cursor: pointer;
 				&::after {
 					content: url('../assets/arrowwhite.svg');
 					margin-left: 10px;
@@ -289,7 +309,7 @@ h6 {
 			color: #d0d0d0;
 			margin-top: 50px;
 			a {
-				text-decoration: underline;
+				border-bottom: 1px solid #d0d0d0;
 				color: #d0d0d0;
 			}
 		}
@@ -300,6 +320,7 @@ h6 {
 		width: 468px;
 		padding: 122px 0 122px 45px;
 		h5 {
+			color: var(--white);
 			font-size: 32px;
 			font-weight: 500;
 			line-height: 38.4px;
@@ -315,6 +336,7 @@ h6 {
 			border: 2px solid var(--white);
 			padding: 25px 40px;
 			border-radius: 90px;
+			cursor: pointer;
 			&::after {
 				content: url('../assets/arrowwhite.svg');
 				margin-left: 10px;
@@ -342,6 +364,7 @@ h6 {
 			border: 2px solid #2d2d2d1a;
 			padding: 25px 40px;
 			border-radius: 90px;
+			cursor: pointer;
 			&::after {
 				content: url('../assets/arrowblack.svg');
 				margin-left: 10px;
@@ -354,6 +377,7 @@ h6 {
 		width: 935px;
 		padding: 84px 73px 84px 50px;
 		h5 {
+			color: var(--white);
 			font-size: 32px;
 			font-weight: 500;
 			line-height: 38.4px;
@@ -361,6 +385,7 @@ h6 {
 			margin-bottom: 15px;
 		}
 		p {
+			color: var(--white);
 			font-size: 18px;
 			line-height: 21.6px;
 			letter-spacing: -0.03em;
@@ -375,6 +400,7 @@ h6 {
 			border: 2px solid #ffffff1a;
 			padding: 25px 40px;
 			border-radius: 90px;
+			cursor: pointer;
 			&::after {
 				content: url('../assets/arrowwhite.svg');
 				margin-left: 10px;
@@ -402,7 +428,7 @@ h6 {
 }
 
 .faq {
-	margin-bottom: 60px;
+	margin-bottom: 130px;
 	h4 {
 		font-size: 40px;
 		font-weight: 700;
@@ -411,10 +437,45 @@ h6 {
 		margin-bottom: 60px;
 		color: var(--black);
 	}
-	summary,
-	details {
-		color: var(--black);
-		/* padding: 40px; */
+	&_body {
+		box-shadow: 0px 4px 30px 0px #00000008;
+		-webkit-box-shadow: 0px 4px 30px 0px #00000008;
+		background-color: var(--white);
+		padding: 40px;
+		margin-bottom: 20px;
+	}
+	&_title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 24px;
+		font-weight: 500;
+		line-height: 26.4px;
+		letter-spacing: -0.03em;
+		cursor: pointer;
+		&::after {
+			content: url(../assets/Add_Plus_close.svg);
+			transition: all 250ms ease-in-out;
+		}
+	}
+	&_content {
+		font-size: 18px;
+		line-height: 19.8px;
+		letter-spacing: -0.03em;
+		visibility: hidden;
+		opacity: 0;
+		max-height: 0;
+		transition: all 250ms ease-in-out;
+	}
+	&_content.active {
+		visibility: visible;
+		opacity: 1;
+		max-height: 100%;
+		padding-top: 31px;
+	}
+	&_body.active .faq_title::after {
+		display: inline-block;
+		transform: rotate(45deg);
 	}
 }
 
@@ -471,6 +532,7 @@ h6 {
 			font-weight: 600;
 			line-height: 25.36px;
 			letter-spacing: -0.03em;
+			cursor: pointer;
 		}
 	}
 }
@@ -530,11 +592,13 @@ h6 {
 				content: url('../assets/marker.svg');
 				margin-right: 10px;
 				width: 24px;
+				vertical-align: middle;
 			}
 			&:last-child::before {
 				content: url('../assets/envelope.svg');
 				margin-right: 10px;
 				width: 24px;
+				vertical-align: middle;
 			}
 		}
 	}
@@ -543,5 +607,69 @@ h6 {
 		font-size: 12px;
 		line-height: 13.2px;
 		letter-spacing: -0.03em;
+	}
+}
+
+#modal {
+	display: none;
+	background-image: url(../assets/modal_bg.jpg);
+	background-size: cover;
+	max-width: 996px;
+	margin: auto;
+	.modal {
+		&_body {
+			padding: 30px 110px;
+			text-align: center;
+		}
+		&_close svg {
+			margin: auto;
+			cursor: pointer;
+		}
+		&_title {
+			margin-top: 40px;
+			margin-bottom: 37px;
+			text-align: center;
+			div:first-child {
+				font-size: 40px;
+				font-weight: 700;
+				line-height: 48px;
+				letter-spacing: -0.03em;
+				margin-bottom: 15px;
+			}
+			div:last-child {
+				font-size: 20px;
+				line-height: 24px;
+				letter-spacing: -0.03em;
+			}
+		}
+		&_form {
+			input {
+				display: block;
+				border: 1px solid #2d2d2d;
+				margin-bottom: 10px;
+				padding: 17px 25px 19px 25px;
+				width: 100%;
+				&:placeholder {
+					font-size: 18px;
+					line-height: 21.6px;
+					letter-spacing: -0.03em;
+				}
+			}
+		}
+		&_btn {
+			margin-top: 30px;
+			button {
+				width: 100%;
+				color: var(--white);
+				font-size: 20px;
+				font-weight: 600;
+				line-height: 25.36px;
+				letter-spacing: -0.03em;
+				background-color: var(--red);
+				border-radius: 90px;
+				padding: 35px 110px;
+				cursor: pointer;
+			}
+		}
 	}
 }

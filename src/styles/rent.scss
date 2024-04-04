@@ -10,10 +10,72 @@
 		margin-bottom: 80px;
 	}
 	&_slider {
+		position: relative;
 		margin-bottom: 60px;
+		.swiper-button-prev,
+		.swiper-button-next {
+			width: 48px;
+			height: 48px;
+			&:hover::after {
+				background-color: var(--red);
+				color: var(--white);
+			}
+		}
+
+		.swiper-button-prev {
+			left: -23px;
+		}
+		.swiper-button-next {
+			right: -23px;
+		}
+
+		.swiper-button-prev:after {
+			content: url(../assets/Caret_Left_SM.svg);
+			background-color: var(--white);
+			padding: 12px;
+			border-radius: 50%;
+			line-height: 0;
+			box-shadow: 0px 4px 80px 0px #0000001a;
+			-webkit-box-shadow: 0px 4px 80px 0px #0000001a;
+		}
+		.swiper-button-next:after {
+			content: url(../assets/Caret_Left_SM.svg);
+			transform: rotate(180deg);
+			background-color: var(--white);
+			padding: 12px;
+			border-radius: 50%;
+			line-height: 0;
+			box-shadow: 0px 4px 80px 0px #0000001a;
+			-webkit-box-shadow: 0px 4px 80px 0px #0000001a;
+		}
+	}
+	&_button {
+		position: absolute;
+		left: 50%;
+		bottom: 60px;
+		transform: translateX(-50%);
+		z-index: 1;
+		button {
+			color: var(--white);
+			background-color: var(--red);
+			font-size: 20px;
+			line-height: 25.36px;
+			letter-spacing: -0.03em;
+			padding: 35px 90px;
+			border-radius: 90px;
+			cursor: pointer;
+			box-shadow: 0px 16px 20px 0px #00000057;
+			-webkit-box-shadow: 0px 16px 20px 0px #00000057;
+			&::after {
+				content: url('../assets/arrowwhite.svg');
+				margin-left: 10px;
+				vertical-align: middle;
+			}
+		}
 	}
 	&_text {
-		padding: 0 260px;
+		max-width: 996px;
+		margin: 0 auto;
 		margin-bottom: 60px;
 		p {
 			font-size: 18px;
@@ -23,7 +85,8 @@
 		}
 	}
 	&_box {
-		padding: 0 260px;
+		max-width: 996px;
+		margin: 0 auto;
 		@include flex(flex, flex-start, center, 50px);
 		flex-wrap: wrap;
 	}
@@ -47,6 +110,7 @@
 	&_item:nth-child(2) {
 		background-image: url('../assets/red3.png');
 		background-color: var(--red);
+		background-size: cover;
 		padding: 61px 96px;
 		color: var(--white);
 	}
@@ -54,6 +118,7 @@
 	&_item:nth-child(3) {
 		background-image: url('../assets/white3.png');
 		background-color: var(--white);
+		background-size: cover;
 		padding: 73px 151px;
 		color: var(--black);
 	}

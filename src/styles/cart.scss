@@ -19,11 +19,11 @@
 		margin-bottom: 55px;
 	}
 	&_box {
-		@include flex(flex, flex-start, flex-start, 49px);
+		@include flex(flex, space-between, flex-start, 50px);
 		margin-bottom: 80px;
 	}
 	&_list {
-		flex: calc(65% - 49px);
+		flex: 0 0 997px;
 	}
 	&_item {
 		@include flex(flex, flex-start, center, 0);
@@ -39,6 +39,7 @@
 		}
 	}
 	&_product {
+		width: 100%;
 		padding: 0 30px;
 		h4 {
 			font-size: 32px;
@@ -76,6 +77,7 @@
 		input {
 			width: 60px;
 			text-align: center;
+			background-color: transparent;
 		}
 		button {
 			background-color: transparent;
@@ -84,7 +86,7 @@
 		}
 	}
 	&_total {
-		flex: calc(35% - 49px);
+		flex: 0 0 473px;
 		background-color: var(--white);
 		box-shadow: 0px 8px 30px 0px #0000000d;
 		padding: 50px;
@@ -149,6 +151,9 @@
 				}
 			}
 		}
+		&_name {
+			position: relative;
+		}
 	}
 	&_form {
 		max-width: 998px;
@@ -170,7 +175,7 @@
 		}
 		form {
 			margin-bottom: 27px;
-			input {
+			input[type='text'] {
 				display: block;
 				border: 1px solid #2d2d2d;
 				margin-bottom: 10px;
@@ -214,4 +219,39 @@
 			}
 		}
 	}
+}
+
+.checkbox {
+	position: absolute;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.checkbox-label {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+}
+.checkbox-view {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 27px;
+	height: 27px;
+	margin-right: 25px;
+	border: 1px solid var(--black);
+	background: var(--white);
+	transition: 0.3s;
+}
+.checkbox-icon {
+	opacity: 0;
+	transition: 0.3s;
+}
+.checkbox:checked + .checkbox-view {
+	background-color: var(--red);
+	border-color: var(--white);
+}
+.checkbox:checked + .checkbox-view .checkbox-icon {
+	opacity: 1;
 }

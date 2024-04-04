@@ -24,13 +24,13 @@
 }
 .cart_box {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
-  gap: 49px;
+  gap: 50px;
   margin-bottom: 80px;
 }
 .cart_list {
-  flex: calc(65% - 49px);
+  flex: 0 0 997px;
 }
 .cart_item {
   display: flex;
@@ -49,6 +49,7 @@
   max-width: none;
 }
 .cart_product {
+  width: 100%;
   padding: 0 30px;
 }
 .cart_product h4 {
@@ -90,6 +91,7 @@
 .cart_product input {
   width: 60px;
   text-align: center;
+  background-color: transparent;
 }
 .cart_product button {
   background-color: transparent;
@@ -97,7 +99,7 @@
   cursor: pointer;
 }
 .cart_total {
-  flex: calc(35% - 49px);
+  flex: 0 0 473px;
   background-color: var(--white);
   box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.0509803922);
   padding: 50px;
@@ -172,6 +174,9 @@
   line-height: 28.8px;
   letter-spacing: -0.03em;
 }
+.cart_payment_name {
+  position: relative;
+}
 .cart_form {
   max-width: 998px;
 }
@@ -194,19 +199,19 @@
 .cart_form form {
   margin-bottom: 27px;
 }
-.cart_form form input {
+.cart_form form input[type=text] {
   display: block;
   border: 1px solid #2d2d2d;
   margin-bottom: 10px;
   padding: 17px 25px 19px 25px;
   width: 100%;
 }
-.cart_form form input:placeholder {
+.cart_form form input[type=text]:placeholder {
   font-size: 18px;
   line-height: 21.6px;
   letter-spacing: -0.03em;
 }
-.cart_form form input[type=checkbox] {
+.cart_form form input[type=text][type=checkbox] {
   width: unset;
   margin-bottom: 0;
 }
@@ -238,4 +243,44 @@
   padding: 35px 110px;
   margin-top: 55px;
   cursor: pointer;
+}
+
+.checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.checkbox-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.checkbox-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  margin-right: 25px;
+  border: 1px solid var(--black);
+  background: var(--white);
+  transition: 0.3s;
+}
+
+.checkbox-icon {
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.checkbox:checked + .checkbox-view {
+  background-color: var(--red);
+  border-color: var(--white);
+}
+
+.checkbox:checked + .checkbox-view .checkbox-icon {
+  opacity: 1;
 }/*# sourceMappingURL=cart.css.map */
