@@ -226,7 +226,8 @@ button:hover {
   gap: 0;
   position: relative;
   background-image: url("../assets/redbus04.jpg");
-  /* height: 979px; */
+  background-size: cover;
+  background-position: center;
 }
 .billboard_info {
   width: 808px;
@@ -281,6 +282,8 @@ button:hover {
   grid-column: span 2;
   grid-row: 1/-1;
   padding: 235px 142px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .tour_info h3 {
   color: var(--white);
@@ -336,6 +339,7 @@ button:hover {
 .tour_tickets {
   background-image: url("../assets/red.png");
   background-color: var(--red);
+  background-size: cover;
   width: 468px;
   padding: 122px 0 122px 45px;
 }
@@ -364,6 +368,7 @@ button:hover {
 }
 .tour_schedule {
   background-image: url("../assets/white.png");
+  background-size: cover;
   width: 468px;
   padding: 122px 0 122px 50px;
 }
@@ -392,6 +397,7 @@ button:hover {
 }
 .tour_rent {
   background-image: url("../assets/bustour.jpg");
+  background-size: cover;
   grid-column: span 2;
   width: 935px;
   padding: 84px 73px 84px 50px;
@@ -504,7 +510,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 175px;
+  gap: 0;
   margin-bottom: 70px;
 }
 .socials_insta {
@@ -572,7 +578,7 @@ button:hover {
   margin-bottom: 130px;
 }
 .instagram div {
-  width: 300px;
+  width: calc(20% - 2px);
 }
 
 .footer {

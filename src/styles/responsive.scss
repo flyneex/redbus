@@ -11,6 +11,13 @@
 		padding-left: 30px;
 		padding-right: 30px;
 	}
+	.tour {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, auto);
+		div[class^='tour_'] {
+			width: 100%;
+		}
+	}
 }
 
 @media only screen and (max-width: 1200px) {
@@ -64,9 +71,9 @@
 		margin-top: 0;
 		margin-bottom: 15px;
 	}
-	.header {
+	.wrapper .header {
 		&_bar {
-			display: block !important;
+			display: block;
 		}
 	}
 	.mobile_menu.header {
@@ -81,6 +88,7 @@
 		position: fixed;
 		background-image: url(../assets/mmenu_bg.png);
 		background-color: var(--red);
+		background-size: cover;
 		flex-direction: column;
 		padding: 27px 30px;
 		margin: 0;
@@ -117,6 +125,45 @@
 			right: 30px;
 		}
 	}
+	.socials {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 31px;
+		margin-bottom: 40px;
+		&_insta {
+			> div:first-child {
+				width: 63px;
+				height: 63px;
+				padding: 16px;
+			}
+			> div:last-child div:first-child {
+				font-size: 16px;
+				line-height: 17.6px;
+			}
+			> div:last-child div:last-child {
+				font-size: 36px;
+				line-height: 39.6px;
+			}
+		}
+		&_publish {
+			gap: 50px;
+			div > div:first-child {
+				font-size: 24px;
+				line-height: 30.43px;
+			}
+			div > div:last-child {
+				font-size: 16px;
+				line-height: 20.29px;
+			}
+		}
+		&_btn {
+			width: 100%;
+			button {
+				width: inherit;
+				padding: 20px 0;
+			}
+		}
+	}
 	.rent {
 		&_button {
 			position: static;
@@ -139,9 +186,92 @@
 			gap: 20px;
 		}
 	}
+	.footer {
+		&_box {
+			flex-direction: column;
+			gap: 40px;
+			margin-bottom: 55px;
+		}
+		&_nav ul {
+			flex-direction: column;
+		}
+		&_contacts {
+			text-align: center;
+		}
+		&_copyright {
+			text-align: center;
+			width: 293px;
+			margin: auto;
+		}
+	}
 }
 
 @media only screen and (max-width: 992px) {
+	.tour {
+		display: block;
+		margin-bottom: 80px;
+		&_info {
+			width: 100%;
+			padding: 29px 37px;
+			h3 {
+				font-size: 24px;
+				line-height: 28.8px;
+			}
+			button:first-child {
+				font-size: 20px;
+				line-height: 25.36px;
+				width: 100%;
+				padding: 20px 0;
+				margin-bottom: 15px;
+			}
+			button:last-child {
+				font-size: 14px;
+				line-height: 17.75px;
+				width: 100%;
+				padding: 22.5px 0;
+			}
+			p {
+				font-size: 14px;
+				line-height: 16.8px;
+			}
+		}
+		&_tickets,
+		&_schedule {
+			width: 100%;
+			padding: 67px 31px;
+			h5 {
+				font-size: 24px;
+				line-height: 28.8px;
+			}
+			button {
+				font-size: 15px;
+				line-height: 19.02px;
+				padding: 22.5px 40px;
+			}
+			div {
+				width: 270px;
+			}
+		}
+		&_rent {
+			width: 100%;
+			padding: 77px 30px;
+			background-size: cover;
+			h5 {
+				font-size: 24px;
+				line-height: 28.8px;
+			}
+			p {
+				font-size: 14px;
+				line-height: 19.6px;
+			}
+			button {
+				font-size: 14px;
+				line-height: 17.75px;
+				padding: 23px 40px;
+			}
+		}
+	}
+
 	.tickets {
 		margin-bottom: 40px;
 		h4 {
@@ -212,13 +342,6 @@
 			margin-bottom: 38px;
 		}
 	}
-	.footer {
-		&_box {
-			flex-direction: column;
-			gap: 40px;
-			margin-bottom: 55px;
-		}
-	}
 }
 
 @media only screen and (max-width: 576px) {
@@ -258,71 +381,6 @@
 			}
 		}
 	}
-
-	.tour {
-		display: block;
-		margin-bottom: 80px;
-		&_info {
-			width: 100%;
-			padding: 29px 37px;
-			h3 {
-				font-size: 24px;
-				line-height: 28.8px;
-			}
-			button:first-child {
-				font-size: 20px;
-				line-height: 25.36px;
-				width: 100%;
-				padding: 20px 0;
-				margin-bottom: 15px;
-			}
-			button:last-child {
-				font-size: 14px;
-				line-height: 17.75px;
-				width: 100%;
-				padding: 22.5px 0;
-			}
-			p {
-				font-size: 14px;
-				line-height: 16.8px;
-			}
-		}
-		&_tickets,
-		&_schedule {
-			width: 100%;
-			padding: 67px 31px;
-			h5 {
-				font-size: 24px;
-				line-height: 28.8px;
-			}
-			button {
-				font-size: 15px;
-				line-height: 19.02px;
-				padding: 22.5px 40px;
-			}
-			div {
-				width: 270px;
-			}
-		}
-		&_rent {
-			width: 100%;
-			padding: 77px 30px;
-			background-size: cover;
-			h5 {
-				font-size: 24px;
-				line-height: 28.8px;
-			}
-			p {
-				font-size: 14px;
-				line-height: 19.6px;
-			}
-			button {
-				font-size: 14px;
-				line-height: 17.75px;
-				padding: 23px 40px;
-			}
-		}
-	}
 	.audiogid {
 		margin-bottom: 80.5px;
 		h4 {
@@ -349,45 +407,7 @@
 			line-height: 19.6px;
 		}
 	}
-	.socials {
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 31px;
-		margin-bottom: 40px;
-		&_insta {
-			> div:first-child {
-				width: 63px;
-				height: 63px;
-				padding: 16px;
-			}
-			> div:last-child div:first-child {
-				font-size: 16px;
-				line-height: 17.6px;
-			}
-			> div:last-child div:last-child {
-				font-size: 36px;
-				line-height: 39.6px;
-			}
-		}
-		&_publish {
-			gap: 50px;
-			div > div:first-child {
-				font-size: 24px;
-				line-height: 30.43px;
-			}
-			div > div:last-child {
-				font-size: 16px;
-				line-height: 20.29px;
-			}
-		}
-		&_btn {
-			width: 100%;
-			button {
-				width: inherit;
-				padding: 20px 0;
-			}
-		}
-	}
+
 	.instagram {
 		margin-bottom: 80px;
 		div {
@@ -428,8 +448,6 @@
 			div:nth-child(2) {
 				font-size: 24px;
 				line-height: 28.8px;
-			}
-			div:last-child {
 			}
 		}
 		&_item:last-child,
@@ -527,19 +545,5 @@
 
 	.checkbox-view {
 		flex: 0 0 auto;
-	}
-
-	.footer {
-		&_nav ul {
-			flex-direction: column;
-		}
-		&_contacts {
-			text-align: center;
-		}
-		&_copyright {
-			text-align: center;
-			width: 293px;
-			margin: auto;
-		}
 	}
 }

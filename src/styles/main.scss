@@ -208,7 +208,8 @@ button:hover {
 	@include flex(flex, center, center, 0);
 	position: relative;
 	background-image: url('../assets/redbus04.jpg');
-	/* height: 979px; */
+	background-size: cover;
+	background-position: center;
 	&_info {
 		width: 808px;
 		text-align: center;
@@ -262,6 +263,8 @@ button:hover {
 		grid-column: span 2;
 		grid-row: 1/-1;
 		padding: 235px 142px;
+		background-size: cover;
+		background-repeat: no-repeat;
 		h3 {
 			color: var(--white);
 			font-size: 48px;
@@ -317,6 +320,7 @@ button:hover {
 	&_tickets {
 		background-image: url('../assets/red.png');
 		background-color: var(--red);
+		background-size: cover;
 		width: 468px;
 		padding: 122px 0 122px 45px;
 		h5 {
@@ -345,6 +349,7 @@ button:hover {
 	}
 	&_schedule {
 		background-image: url('../assets/white.png');
+		background-size: cover;
 		width: 468px;
 		padding: 122px 0 122px 50px;
 		h5 {
@@ -373,6 +378,7 @@ button:hover {
 	}
 	&_rent {
 		background-image: url('../assets/bustour.jpg');
+		background-size: cover;
 		grid-column: span 2;
 		width: 935px;
 		padding: 84px 73px 84px 50px;
@@ -480,7 +486,7 @@ button:hover {
 }
 
 .socials {
-	@include flex(flex, space-between, center, 175px);
+	@include flex(flex, space-between, center, 0);
 	margin-bottom: 70px;
 	&_insta {
 		@include flex(flex, space-between, center, 40px);
@@ -542,7 +548,7 @@ button:hover {
 	flex-wrap: wrap;
 	margin-bottom: 130px;
 	div {
-		width: calc(302px - 2px);
+		width: calc(20% - 2px);
 	}
 }
 

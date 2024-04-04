@@ -15,6 +15,13 @@
     padding-left: 30px;
     padding-right: 30px;
   }
+  .tour {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+  .tour div[class^=tour_] {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .header_logo div:first-child {
@@ -64,8 +71,8 @@
     margin-top: 0;
     margin-bottom: 15px;
   }
-  .header_bar {
-    display: block !important;
+  .wrapper .header_bar {
+    display: block;
   }
   .mobile_menu.header {
     margin-top: 0;
@@ -79,6 +86,7 @@
     position: fixed;
     background-image: url(../assets/mmenu_bg.png);
     background-color: var(--red);
+    background-size: cover;
     flex-direction: column;
     padding: 27px 30px;
     margin: 0;
@@ -113,6 +121,43 @@
     top: 22px;
     right: 30px;
   }
+  .socials {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 31px;
+    margin-bottom: 40px;
+  }
+  .socials_insta > div:first-child {
+    width: 63px;
+    height: 63px;
+    padding: 16px;
+  }
+  .socials_insta > div:last-child div:first-child {
+    font-size: 16px;
+    line-height: 17.6px;
+  }
+  .socials_insta > div:last-child div:last-child {
+    font-size: 36px;
+    line-height: 39.6px;
+  }
+  .socials_publish {
+    gap: 50px;
+  }
+  .socials_publish div > div:first-child {
+    font-size: 24px;
+    line-height: 30.43px;
+  }
+  .socials_publish div > div:last-child {
+    font-size: 16px;
+    line-height: 20.29px;
+  }
+  .socials_btn {
+    width: 100%;
+  }
+  .socials_btn button {
+    width: inherit;
+    padding: 20px 0;
+  }
   .rent_button {
     position: static;
     transform: none;
@@ -130,113 +175,24 @@
     align-items: stretch;
     gap: 20px;
   }
-}
-@media only screen and (max-width: 992px) {
-  .tickets {
-    margin-bottom: 40px;
-  }
-  .tickets h4 {
-    font-size: 32px;
-    line-height: 38.4px;
-    margin-bottom: 40px;
-  }
-  .tickets_item {
-    width: 100%;
-    padding: 38px 52px;
-  }
-  .tickets_item div:first-child {
-    font-size: 24px;
-    line-height: 28.8px;
-  }
-  .tickets_item div:last-child {
-    font-size: 24px;
-    line-height: 28.8px;
-  }
-  .tickets_item:nth-child(2n+1) {
-    padding: 71px 81px;
-  }
-  .tickets_box {
-    flex-direction: column;
-  }
-  .tickets_btn a {
-    width: 100%;
-  }
-  .tickets_btn a button {
-    font-size: 20px;
-    line-height: 25.36px;
-    padding: 20px 0;
-    width: 100%;
-  }
-  .expo_info {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .expo_info div {
-    font-size: 24px;
-    line-height: 33.6px;
-    align-items: center;
-  }
-  .expo_text p {
-    font-size: 18px;
-    line-height: 25.2px;
-  }
-  .ticket_slider {
-    margin-bottom: 80px;
-  }
-  .ticket_slider .swiper-slide {
-    width: 321px !important;
-  }
-  .ticket_slider .swiper-button-next {
-    right: 10%;
-  }
-  .map h4 {
-    font-size: 32px;
-    line-height: 35.2px;
-    margin-bottom: 38px;
-  }
   .footer_box {
     flex-direction: column;
     gap: 40px;
     margin-bottom: 55px;
   }
-}
-@media only screen and (max-width: 576px) {
-  .header {
-    margin-top: 25px;
-  }
-  .header_red + .header_mobnum {
-    padding-top: 0;
-  }
-  .header_mobnum {
-    padding-top: 99px;
-    width: 100%;
-  }
-  .billboard {
-    background-size: cover;
-    background-position: 70% center;
+  .footer_nav ul {
     flex-direction: column;
   }
-  .billboard_info {
-    width: 100%;
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-top: 35px;
-    margin-bottom: 75px;
+  .footer_contacts {
+    text-align: center;
   }
-  .billboard_info h1 {
-    font-size: 36px;
-    line-height: 39.6px;
+  .footer_copyright {
+    text-align: center;
+    width: 293px;
+    margin: auto;
   }
-  .billboard_info p {
-    font-size: 20px;
-    line-height: 25.36px;
-  }
-  .billboard_info button {
-    width: 100%;
-    font-size: 14px;
-    line-height: 17.75px;
-    padding: 22px 0;
-  }
+}
+@media only screen and (max-width: 992px) {
   .tour {
     display: block;
     margin-bottom: 80px;
@@ -300,6 +256,106 @@
     line-height: 17.75px;
     padding: 23px 40px;
   }
+  .tickets {
+    margin-bottom: 40px;
+  }
+  .tickets h4 {
+    font-size: 32px;
+    line-height: 38.4px;
+    margin-bottom: 40px;
+  }
+  .tickets_item {
+    width: 100%;
+    padding: 38px 52px;
+  }
+  .tickets_item div:first-child {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .tickets_item div:last-child {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .tickets_item:nth-child(2n+1) {
+    padding: 71px 81px;
+  }
+  .tickets_box {
+    flex-direction: column;
+  }
+  .tickets_btn a {
+    width: 100%;
+  }
+  .tickets_btn a button {
+    font-size: 20px;
+    line-height: 25.36px;
+    padding: 20px 0;
+    width: 100%;
+  }
+  .expo_info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .expo_info div {
+    font-size: 24px;
+    line-height: 33.6px;
+    align-items: center;
+  }
+  .expo_text p {
+    font-size: 18px;
+    line-height: 25.2px;
+  }
+  .ticket_slider {
+    margin-bottom: 80px;
+  }
+  .ticket_slider .swiper-slide {
+    width: 321px !important;
+  }
+  .ticket_slider .swiper-button-next {
+    right: 10%;
+  }
+  .map h4 {
+    font-size: 32px;
+    line-height: 35.2px;
+    margin-bottom: 38px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .header {
+    margin-top: 25px;
+  }
+  .header_red + .header_mobnum {
+    padding-top: 0;
+  }
+  .header_mobnum {
+    padding-top: 99px;
+    width: 100%;
+  }
+  .billboard {
+    background-size: cover;
+    background-position: 70% center;
+    flex-direction: column;
+  }
+  .billboard_info {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 35px;
+    margin-bottom: 75px;
+  }
+  .billboard_info h1 {
+    font-size: 36px;
+    line-height: 39.6px;
+  }
+  .billboard_info p {
+    font-size: 20px;
+    line-height: 25.36px;
+  }
+  .billboard_info button {
+    width: 100%;
+    font-size: 14px;
+    line-height: 17.75px;
+    padding: 22px 0;
+  }
   .audiogid {
     margin-bottom: 80.5px;
   }
@@ -325,43 +381,6 @@
   .faq_content {
     font-size: 14px;
     line-height: 19.6px;
-  }
-  .socials {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 31px;
-    margin-bottom: 40px;
-  }
-  .socials_insta > div:first-child {
-    width: 63px;
-    height: 63px;
-    padding: 16px;
-  }
-  .socials_insta > div:last-child div:first-child {
-    font-size: 16px;
-    line-height: 17.6px;
-  }
-  .socials_insta > div:last-child div:last-child {
-    font-size: 36px;
-    line-height: 39.6px;
-  }
-  .socials_publish {
-    gap: 50px;
-  }
-  .socials_publish div > div:first-child {
-    font-size: 24px;
-    line-height: 30.43px;
-  }
-  .socials_publish div > div:last-child {
-    font-size: 16px;
-    line-height: 20.29px;
-  }
-  .socials_btn {
-    width: 100%;
-  }
-  .socials_btn button {
-    width: inherit;
-    padding: 20px 0;
   }
   .instagram {
     margin-bottom: 80px;
@@ -489,16 +508,5 @@
   }
   .checkbox-view {
     flex: 0 0 auto;
-  }
-  .footer_nav ul {
-    flex-direction: column;
-  }
-  .footer_contacts {
-    text-align: center;
-  }
-  .footer_copyright {
-    text-align: center;
-    width: 293px;
-    margin: auto;
   }
 }/*# sourceMappingURL=responsive.css.map */
