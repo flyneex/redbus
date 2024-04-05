@@ -10,6 +10,9 @@
 	<link rel="stylesheet" href="./styles/tickets.css">
 	<link rel="stylesheet" href="./styles/responsive.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.css"
+		integrity="sha512-QTpdLyhbsKTcw96BN95Q8NR8VGRUytidi1MP7QicHpODIFHwQvpFonJt8uhMGQVymvJhvkmLNFl8jXFFpjsq1Q=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -81,7 +84,7 @@
 				</div>
 			</div>
 			<div class="tickets_btn">
-				<a href="#"><button>Купить билет</button></a>
+				<a href="cart.html"><button>Купить билет</button></a>
 			</div>
 		</section>
 		<section class="expo wrapper">
@@ -99,15 +102,15 @@
 		<section class="ticket_slider">
 			<div class="swiper swiper-ticket">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide">
+					<a class="swiper-slide" href="./assets/1683632768.jpg" data-fancybox="gallery">
 						<img src="./assets/1683632768.jpg" alt="Slide">
-					</div>
-					<div class="swiper-slide">
+					</a>
+					<a class="swiper-slide" href="./assets/1683632768.jpg" data-fancybox="gallery">
 						<img src="./assets/1683632768.jpg" alt="Slide">
-					</div>
-					<div class="swiper-slide">
+					</a>
+					<a class="swiper-slide" href="./assets/1683632768.jpg" data-fancybox="gallery">
 						<img src="./assets/1683632768.jpg" alt="Slide">
-					</div>
+					</a>
 				</div>
 			</div>
 			<div class="swiper-button-prev">
@@ -196,6 +199,17 @@
 		});
 	</script>
 	<script src='./scripts/script.js'></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"
+		integrity="sha512-GtU3C24wUoqw9549QI/9K3/JVLHIVqdwdDVkEkaX8umZS7TGEaBFUSBJe6tU6/VAc20z9BkYN3Yw2Jov7pUrqQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+		$('[data-fancybox="gallery"]').fancybox({
+			beforeClose: function (instance, slide) {
+				console.log(instance, slide)
+			}
+		});
+	</script>
 </body>
 
 </html>

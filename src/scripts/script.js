@@ -29,6 +29,6 @@ btn.forEach(function (e) {
 		modal.style.display = 'block'
 	})
 })
-close.addEventListener('mousedown', () => {
-	modal.style.display = 'none'
-})
+// close.addEventListener('mousedown', () => {
+// 	modal.style.display = 'none'
+// })
