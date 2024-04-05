@@ -19,3 +19,16 @@ cross.addEventListener('mousedown', () => {
 	console.log('1212')
 	menu.classList.remove('mobile_menu')
 })
+
+const btn = document.querySelectorAll('.rent-modal')
+const modal = document.getElementById('modal')
+const close = document.querySelector('.modal_close')
+
+btn.forEach(function (e) {
+	e.addEventListener('mousedown', () => {
+		modal.style.display = 'block'
+	})
+})
+close.addEventListener('mousedown', () => {
+	modal.style.display = 'none'
+})

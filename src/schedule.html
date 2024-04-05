@@ -8,10 +8,11 @@
 	<link rel="stylesheet" href="./styles/stylesheet.css">
 	<link rel="stylesheet" href="./styles/main.css">
 	<link rel="stylesheet" href="./styles/schedule.css">
+	<link rel="stylesheet" href="./styles/responsive.css">
 </head>
 
 <body>
-	<header class='header_red'>
+	<header class='header header_red'>
 		<div class="wrapper">
 			<div class="header_logo">
 				<a href="#">
@@ -22,9 +23,9 @@
 			<nav class='header_nav'>
 				<ul>
 					<li><a href="#">О нас</a></li>
-					<li><a class="active" href="#">Маршруты</a></li>
-					<li><a href="#">Расписание</a></li>
-					<li><a href="#">Аренда</a></li>
+					<li><a class="active" href="tickets.html">Маршруты</a></li>
+					<li><a href="schedule.html">Расписание</a></li>
+					<li><a href="rent.html">Аренда</a></li>
 					<li><a href="#">Контакты</a></li>
 				</ul>
 			</nav>
@@ -35,8 +36,23 @@
 				</div>
 				<div class="header_cart"><img src="./assets/cart.svg" alt="Cart"></div>
 			</div>
+			<div class="header_bar">
+				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M8.33337 28.3333H31.6667M8.33337 20H31.6667M8.33337 11.6667H31.6667" stroke="white" stroke-width="2"
+						stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</div>
+			<div class="mobile_cross">
+				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M29.9999 29.9999L20 20M20 20L10 10M20 20L30.0001 10M20 20L10 30.0001" stroke="white" stroke-width="2"
+						stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</div>
 		</div>
 	</header>
+	<div class="header_mobnum wrapper">
+		<a href="tel:+77775557575">+7 777 555 7575</a>
+	</div>
 	<div class="breadcrums wrapper">
 		<ul>
 			<li><a href="#">Главная</a></li>
@@ -113,6 +129,7 @@
 			<div class="footer_copyright">&copy; 2024 Товарищество с ограниченной ответственностью «Visit Astana»</div>
 		</div>
 	</footer>
+	<script src='./scripts/script.js'></script>
 </body>
 
 </html>

@@ -18,6 +18,14 @@
 			width: 100%;
 		}
 	}
+	.cart {
+		&_list {
+			flex: 0 1 70%;
+		}
+		&_total {
+			flex: 0 0 30%;
+		}
+	}
 }
 
 @media only screen and (max-width: 1200px) {
@@ -79,12 +87,17 @@
 	.mobile_menu.header {
 		margin-top: 0;
 	}
+	.mobile_menu.header.header_red .wrapper {
+		flex-direction: column;
+		// height: 100%;
+	}
 	.mobile_menu.wrapper {
 		width: 100%;
 		justify-content: flex-start;
 		gap: 0;
 	}
 	.mobile_menu {
+		z-index: 99;
 		position: fixed;
 		background-image: url(../assets/mmenu_bg.png);
 		background-color: var(--red);
@@ -164,6 +177,26 @@
 			}
 		}
 	}
+	.tickets {
+		&_box {
+			flex-direction: column;
+		}
+		&_item {
+			width: 100%;
+			padding: 38px 52px;
+			div:first-child {
+				font-size: 24px;
+				line-height: 28.8px;
+			}
+			div:last-child {
+				font-size: 24px;
+				line-height: 28.8px;
+			}
+			&:nth-child(2n + 1) {
+				padding: 71px 81px;
+			}
+		}
+	}
 	.rent {
 		&_button {
 			position: static;
@@ -185,15 +218,18 @@
 			align-items: stretch;
 			gap: 20px;
 		}
+		&_img {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			background-size: cover;
+		}
 	}
 	.footer {
 		&_box {
 			flex-direction: column;
 			gap: 40px;
 			margin-bottom: 55px;
-		}
-		&_nav ul {
-			flex-direction: column;
 		}
 		&_contacts {
 			text-align: center;
@@ -271,7 +307,16 @@
 			}
 		}
 	}
-
+	.schedule {
+		&_box {
+			flex-direction: column;
+		}
+		&_item {
+			width: 100%;
+			flex: 0 0 100%;
+			background-size: cover;
+		}
+	}
 	.tickets {
 		margin-bottom: 40px;
 		h4 {
@@ -279,24 +324,7 @@
 			line-height: 38.4px;
 			margin-bottom: 40px;
 		}
-		&_item {
-			width: 100%;
-			padding: 38px 52px;
-			div:first-child {
-				font-size: 24px;
-				line-height: 28.8px;
-			}
-			div:last-child {
-				font-size: 24px;
-				line-height: 28.8px;
-			}
-			&:nth-child(2n + 1) {
-				padding: 71px 81px;
-			}
-		}
-		&_box {
-			flex-direction: column;
-		}
+
 		&_btn {
 			a {
 				width: 100%;
@@ -335,7 +363,17 @@
 			right: 10%;
 		}
 	}
+	.cart {
+		&_payment {
+			&_item {
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 27px;
+			}
+		}
+	}
 	.map {
+		margin-bottom: 80px;
 		h4 {
 			font-size: 32px;
 			line-height: 35.2px;
@@ -407,13 +445,44 @@
 			line-height: 19.6px;
 		}
 	}
-
 	.instagram {
 		margin-bottom: 80px;
 		div {
 			flex: 0 0 100%;
 			img {
 				width: 100%;
+			}
+		}
+	}
+	.schedule {
+		margin-bottom: 80px;
+		h4 {
+			font-size: 32px;
+			line-height: 38.4px;
+		}
+		&_item {
+			div:first-child {
+				font-size: 24px;
+				line-height: 28.8px;
+			}
+			div:last-child {
+				font-size: 24px;
+				line-height: 28.8px;
+			}
+		}
+		&_text {
+			h5 {
+				font-size: 24px;
+				line-height: 28.8px;
+				margin-bottom: 64px;
+			}
+			p,
+			ul li {
+				font-size: 14px;
+				line-height: 19.6px;
+			}
+			p {
+				margin-bottom: 40px;
 			}
 		}
 	}
@@ -424,7 +493,6 @@
 			line-height: 38.4px;
 			margin-bottom: 40px;
 		}
-
 		&_text {
 			p {
 				font-size: 14px;
@@ -526,9 +594,6 @@
 				line-height: 38.4px;
 			}
 			&_item {
-				flex-direction: column;
-				align-items: flex-start;
-				gap: 27px;
 				> div p {
 					font-size: 16px;
 					line-height: 19.2px;
@@ -542,7 +607,11 @@
 			}
 		}
 	}
-
+	.footer {
+		&_nav ul {
+			flex-direction: column;
+		}
+	}
 	.checkbox-view {
 		flex: 0 0 auto;
 	}

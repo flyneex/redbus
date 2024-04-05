@@ -321,7 +321,7 @@ button:hover {
 		background-image: url('../assets/red.png');
 		background-color: var(--red);
 		background-size: cover;
-		width: 468px;
+		// width: 468px;
 		padding: 122px 0 122px 45px;
 		h5 {
 			color: var(--white);
@@ -350,7 +350,7 @@ button:hover {
 	&_schedule {
 		background-image: url('../assets/white.png');
 		background-size: cover;
-		width: 468px;
+		// width: 468px;
 		padding: 122px 0 122px 50px;
 		h5 {
 			font-size: 32px;
@@ -380,7 +380,7 @@ button:hover {
 		background-image: url('../assets/bustour.jpg');
 		background-size: cover;
 		grid-column: span 2;
-		width: 935px;
+		// width: 935px;
 		padding: 84px 73px 84px 50px;
 		h5 {
 			color: var(--white);
@@ -618,10 +618,15 @@ button:hover {
 
 #modal {
 	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	background-image: url(../assets/modal_bg.jpg);
 	background-size: cover;
 	max-width: 996px;
 	margin: auto;
+	z-index: 99;
 	.modal {
 		&_body {
 			padding: 30px 110px;

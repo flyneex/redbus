@@ -23,6 +23,7 @@
 .rent_slider .swiper-button-next {
   width: 48px;
   height: 48px;
+  transform: translateY(-50%);
 }
 .rent_slider .swiper-button-prev:hover::after,
 .rent_slider .swiper-button-next:hover::after {

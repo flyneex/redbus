@@ -22,6 +22,12 @@
   .tour div[class^=tour_] {
     width: 100%;
   }
+  .cart_list {
+    flex: 0 1 70%;
+  }
+  .cart_total {
+    flex: 0 0 30%;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .header_logo div:first-child {
@@ -77,12 +83,16 @@
   .mobile_menu.header {
     margin-top: 0;
   }
+  .mobile_menu.header.header_red .wrapper {
+    flex-direction: column;
+  }
   .mobile_menu.wrapper {
     width: 100%;
     justify-content: flex-start;
     gap: 0;
   }
   .mobile_menu {
+    z-index: 99;
     position: fixed;
     background-image: url(../assets/mmenu_bg.png);
     background-color: var(--red);
@@ -158,6 +168,24 @@
     width: inherit;
     padding: 20px 0;
   }
+  .tickets_box {
+    flex-direction: column;
+  }
+  .tickets_item {
+    width: 100%;
+    padding: 38px 52px;
+  }
+  .tickets_item div:first-child {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .tickets_item div:last-child {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .tickets_item:nth-child(2n+1) {
+    padding: 71px 81px;
+  }
   .rent_button {
     position: static;
     transform: none;
@@ -175,13 +203,16 @@
     align-items: stretch;
     gap: 20px;
   }
+  .cart_img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+  }
   .footer_box {
     flex-direction: column;
     gap: 40px;
     margin-bottom: 55px;
-  }
-  .footer_nav ul {
-    flex-direction: column;
   }
   .footer_contacts {
     text-align: center;
@@ -256,6 +287,14 @@
     line-height: 17.75px;
     padding: 23px 40px;
   }
+  .schedule_box {
+    flex-direction: column;
+  }
+  .schedule_item {
+    width: 100%;
+    flex: 0 0 100%;
+    background-size: cover;
+  }
   .tickets {
     margin-bottom: 40px;
   }
@@ -263,24 +302,6 @@
     font-size: 32px;
     line-height: 38.4px;
     margin-bottom: 40px;
-  }
-  .tickets_item {
-    width: 100%;
-    padding: 38px 52px;
-  }
-  .tickets_item div:first-child {
-    font-size: 24px;
-    line-height: 28.8px;
-  }
-  .tickets_item div:last-child {
-    font-size: 24px;
-    line-height: 28.8px;
-  }
-  .tickets_item:nth-child(2n+1) {
-    padding: 71px 81px;
-  }
-  .tickets_box {
-    flex-direction: column;
   }
   .tickets_btn a {
     width: 100%;
@@ -312,6 +333,14 @@
   }
   .ticket_slider .swiper-button-next {
     right: 10%;
+  }
+  .cart_payment_item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 27px;
+  }
+  .map {
+    margin-bottom: 80px;
   }
   .map h4 {
     font-size: 32px;
@@ -390,6 +419,34 @@
   }
   .instagram div img {
     width: 100%;
+  }
+  .schedule {
+    margin-bottom: 80px;
+  }
+  .schedule h4 {
+    font-size: 32px;
+    line-height: 38.4px;
+  }
+  .schedule_item div:first-child {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .schedule_item div:last-child {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .schedule_text h5 {
+    font-size: 24px;
+    line-height: 28.8px;
+    margin-bottom: 64px;
+  }
+  .schedule_text p,
+  .schedule_text ul li {
+    font-size: 14px;
+    line-height: 19.6px;
+  }
+  .schedule_text p {
+    margin-bottom: 40px;
   }
   .rent {
     margin-bottom: 80px;
@@ -493,11 +550,6 @@
     font-size: 32px;
     line-height: 38.4px;
   }
-  .cart_payment_item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 27px;
-  }
   .cart_payment_item > div p {
     font-size: 16px;
     line-height: 19.2px;
@@ -505,6 +557,9 @@
   .cart_form form button {
     padding: 20px 0;
     width: 100%;
+  }
+  .footer_nav ul {
+    flex-direction: column;
   }
   .checkbox-view {
     flex: 0 0 auto;

@@ -26,7 +26,7 @@
   flex: calc(33.333% - 48px);
   background-image: url("../assets/white2.png");
   background-color: var(--white);
-  padding: 120px 59px;
+  padding: 120px 0;
   text-align: center;
 }
 .schedule_item div:first-child {
@@ -42,7 +42,8 @@
   letter-spacing: -0.03em;
 }
 .schedule_text {
-  padding: 0 260px;
+  max-width: 996px;
+  margin: 0 auto;
 }
 .schedule_text h5 {
   font-size: 32px;
